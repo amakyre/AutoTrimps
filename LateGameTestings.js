@@ -450,7 +450,7 @@ function autoHeirlooms() {
     //advBtn.setAttribute("onmouseover", 'tooltip(\"Advanced Settings\", \"customText\", event, \"Leave off unless you know what you\'re doing with them.\")');
 }
 
-//Determines the best heirloom mods
+
 function evaluateMods(loom, location, upgrade) {
     var index = loom;
     var bestUpgrade = {
@@ -658,7 +658,7 @@ function evaluateMods(loom, location, upgrade) {
     return eff;
 }
 
-//Heirloom helper function
+
 function checkForMod(what, loom, location){
     var heirloom = game.global[location][loom];
     for (var mod in heirloom.mods){
@@ -667,7 +667,8 @@ function checkForMod(what, loom, location){
     return false;
 }
 
-//back end function for autoLevelEquipment to determine most cost efficient items, and what color they should be.
+
+
 function evaluateEfficiency(equipName) {
     var equip = equipmentList[equipName];
     var gameResource = equip.Equip ? game.equipment[equipName] : game.buildings[equipName];
@@ -693,10 +694,7 @@ function evaluateEfficiency(equipName) {
         var CanAfford = canAffordTwoLevel(game.upgrades[equip.Upgrade]);
         if (equip.Equip) {
             var NextEff = PrestigeValue(equip.Upgrade);
-            //Scientist 3 and 4 challenge: set metalcost to Infinity so it can buy equipment levels without waiting for prestige. (fake the impossible science cost)
-            if (game.global.challengeActive == "Scientist" && getScientistLevel() > 2)
-                var NextCost =  Infinity;
-            else
+
             var NextCost = getNextPrestigeCost(equip.Upgrade) * Math.pow(1 - game.portal.Artisanistry.modifier, game.portal.Artisanistry.level);
             Wall = (NextEff / NextCost > Res);
         }
@@ -746,9 +744,7 @@ function evaluateEfficiency(equipName) {
         Res = 0;
         Wall = true;
     }
-    if (gameResource.level < 2 && equip.Stat == 'health' && getPageSetting('AlwaysArmorLvl2')){
-        Res = 9999 - gameResource.prestige;
-    }
+
 
     return {
         Stat: equip.Stat,
@@ -758,7 +754,7 @@ function evaluateEfficiency(equipName) {
     };
 }
 
-//Returns the amount of stats that the equipment (or gym) will give when bought.
+
 function Effect(gameResource, equip) {
     if (equip.Equip) {
         return gameResource[equip.Stat + 'Calculated'];
@@ -771,7 +767,7 @@ function Effect(gameResource, equip) {
     }
 }
 
-//Returns the cost after Artisanistry of a piece of equipment.
+
 function Cost(gameResource, equip) {
     preBuy();
     game.global.buyAmt = 1;
@@ -781,7 +777,7 @@ function Cost(gameResource, equip) {
     return price;
 }
 
-//Returns the amount of stats that the prestige will give when bought.
+
 function PrestigeValue(what) {
     var name = game.upgrades[what].prestiges;
     var equipment = game.equipment[name];
@@ -1074,7 +1070,7 @@ function buyStorage() {
        //if(game.global.world > 171 && game.global.world < 179 && game.global.lastClearedCell > 81 && game.global.mapBonus < 10) {
        //     document.getElementById('Prestige').selectedIndex = 6;
         //    autoTrimpSettings.Prestige.selected = "Polierarm";
-       if (game.global.world < 200) {
+       if (game.global.world < 210) {
            document.getElementById('Prestige').selectedIndex = 6;
            autoTrimpSettings.Prestige.selected = "Polierarm";
        } else {
@@ -1168,9 +1164,7 @@ function buyJobs() {
     if (game.global.world > 180) {
         scientistRatio = totalRatio / 500;
     }
-    if (game.global.world > 200) {
-        scientistRatio = totalRatio / 2000;
-    }
+
 
     
     if (game.global.challengeActive == 'Watch'){
@@ -1407,11 +1401,7 @@ function autoLevelEquipment() {
                     debug('Leveling equipment ' + Best[stat].Name, '*upload3');
                     buyEquipment(Best[stat].Name, null, true);
                 }
-            if (getPageSetting('BuyArmor') && (DaThing.Stat == 'health') && getPageSetting('AlwaysArmorLvl2') && game.equipment[eqName].level < 2){
-                if (DaThing.Equip && !Best[stat].Wall && canAffordBuilding(eqName, null, null, true)) {             
-                    debug('Leveling equipment ' + eqName + " (AlwaysArmorLvl2)", '*upload3');
-                    buyEquipment(eqName, null, true);
-                } // ??idk??    && (getPageSetting('DelayArmorWhenNeeded') && enoughDamage)
+
             }
         }
     }
@@ -1798,7 +1788,7 @@ function autoMap() {
         }
         //here we start doing maps for null its fun (and also for spire)
         var shouldDoNullMaps = false;
-        if ((game.global.mapBonus < 1 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185)) ||
+        if (game.global.mapBonus < 1 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185)) {
         //if ((game.global.mapBonus < 2 && game.global.world > 165 && game.global.world < 171 && game.global.world != 170 && game.global.world != 200) ||
         //////(game.global.mapBonus < 5 && game.global.world > 170 && game.global.world < 201 && game.global.world != 170 && game.global.world != 185 && game.global.world != 200) ||
         //////(game.global.mapBonus < 9 && game.global.world > 180 && game.global.world < 191 && game.global.world != 185 && game.global.world != 200) ||
@@ -1806,7 +1796,7 @@ function autoMap() {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
-        (game.global.mapBonus < 9 && game.global.world > 185 )) {
+        //(game.global.mapBonus < 9 && game.global.world > 208)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
             console.log("now null running = true");
@@ -1845,7 +1835,7 @@ function autoMap() {
          
 
 
-        //Look through all the maps we have - find Uniques or Voids and figure out if we need to run them.
+
         for (var map in game.global.mapsOwnedArray) {
             var theMap = game.global.mapsOwnedArray[map];
             //clear void maps if we need to
@@ -2221,20 +2211,15 @@ function calculateNextHeliumHour (stacked) {
     return heliumNow;
 }
 
-var lastZone = 0;
+
 function autoPortal() {
     switch (autoTrimpSettings.AutoPortal.selected) {
         //portal if we have lower He/hr than the previous zone
         case "Helium Per Hour":
             game.stats.bestHeliumHourThisRun.evaluate();    //normally, evaluate() is only called once per second, but the script runs at 10x a second.
-            var zoneincremented = false;
-            if(game.global.world > lastZone) {
-                lastZone = game.global.world;
-                zoneincremented = true;
-            }
-            if(game.global.world > game.stats.bestHeliumHourThisRun.atZone && zoneincremented == true) {
+            if(game.global.world > game.stats.bestHeliumHourThisRun.atZone) {
                 var bestHeHr = game.stats.bestHeliumHourThisRun.storedValue;
-                var myHeliumHr = game.stats.heliumHour.value();
+                var myHeliumHr = game.stats.heliumHour.value()
                 var heliumHrBuffer = Math.abs(getPageSetting('HeliumHrBuffer'));
                 if(myHeliumHr < bestHeHr * (1-(heliumHrBuffer/100)) && !game.global.challengeActive) {
                     debug("My Helium was: " + myHeliumHr + " & the Best Helium was: " + bestHeHr);
@@ -2255,7 +2240,7 @@ function autoPortal() {
                 else
                     doPortal();
             }
-            break; 
+            break;
         case "Balance":
         case "Electricity":
         case "Crushed":
@@ -2320,12 +2305,13 @@ function checkSettings() {
             break;        
     }
     if(portalLevel == -1)
-        return portalLevel;
-    if(autoTrimpSettings.VoidMaps.value >= portalLevel)
-        tooltip('confirm', null, 'update', 'WARNING: Your void maps are set to complete after your autoPortal, and therefore will not be done at all! Please Change Your Settings Now. This Box Will Not Go away Until You do. Remember you can choose \'Custom\' autoPortal along with challenges for complete control over when you portal. <br><br> Estimated autoPortal level: ' + portalLevel , 'cancelTooltip()', 'Void Maps Conflict');
+        return;
+    if(autoTrimpSettings.VoidMaps.value >= portalLevel) {
+        tooltip('confirm', null, 'update', 'It looks like your void maps may be set to complete after your autoPortal. Your void maps may not be done at all in this case. Please verify your settings. Remember you can choose \'Custom\' autoPortal along with challenges for complete control over when you portal. <br><br> Estimated autoPortal level: ' + portalLevel , 'cancelTooltip()', 'Void Maps Conflict');
+        return;
+    }
     if((leadCheck || game.global.challengeActive == 'Lead') && (autoTrimpSettings.VoidMaps.value % 2 == 0 && portalLevel < 182))
-        tooltip('confirm', null, 'update', 'WARNING: Voidmaps run during Lead on an Even zone do not receive the 2x Helium Bonus for Odd zones, and are also tougher. You should probably fix this.', 'cancelTooltip()', 'Lead Challenge Void Maps');
-    return portalLevel;
+        tooltip('confirm', null, 'update', 'It looks like you may be on the Lead challenge or planning to run it and your void maps are set to complete on an even zone. You will receive double helium for completeing them in an odd numbered zone. Consider changing this.', 'cancelTooltip()', 'Lead Challenge Void Maps');
 }
 
 function doPortal(challenge) {
