@@ -1769,7 +1769,7 @@ function autoMap() {
         }
         //here we start doing maps for null its fun (and also for spire)
         var shouldDoNullMaps = false;
-        if (game.global.mapBonus = 0 && game.global.world == 185) {
+        if (game.global.mapBonus == 0 && game.global.world == 185) {
         //if ((game.global.mapBonus < 2 && game.global.world > 165 && game.global.world < 171 && game.global.world != 170 && game.global.world != 200) ||
         //////(game.global.mapBonus < 5 && game.global.world > 170 && game.global.world < 201 && game.global.world != 170 && game.global.world != 185 && game.global.world != 200) ||
         //////(game.global.mapBonus < 9 && game.global.world > 180 && game.global.world < 191 && game.global.world != 185 && game.global.world != 200) ||
@@ -1783,9 +1783,9 @@ function autoMap() {
             console.log("now null running = true");
 
         }
-        //////shouldFarm = shouldDoNullMaps ? true : shouldFarm;
-        //////enoughDamage = shouldDoNullMaps ? true : enoughDamage;
-        ///////enoughHealth = shouldDoNullMaps ? true : enoughHealth;
+        shouldFarm = shouldDoNullMaps ? true : shouldFarm;
+        enoughDamage = shouldDoNullMaps ? true : enoughDamage;
+        enoughHealth = shouldDoNullMaps ? true : enoughHealth;
         //Create siphonology on demand section.
         var siphlvl = game.global.world - game.portal.Siphonology.level;
 
