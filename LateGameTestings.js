@@ -1909,7 +1909,7 @@ function autoMap() {
                 }
                 if(theMap.name == 'Bionic Wonderland') {
                     var wonderlandDifficulty = Math.ceil(theMap.difficulty / 2);
-                    if(game.global.world == 125 && game.global.mapBonus < 1) {
+                    if(game.global.world == 125 && game.global.mapBonus < 2) {
                         shouldDoMap = theMap.id;
                         break;
                     }
