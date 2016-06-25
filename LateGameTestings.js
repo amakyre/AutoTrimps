@@ -1071,8 +1071,8 @@ function buyStorage() {
        //     document.getElementById('Prestige').selectedIndex = 6;
         //    autoTrimpSettings.Prestige.selected = "Polierarm";
        if (game.global.world < 210) {
-           document.getElementById('Prestige').selectedIndex = 6;
-           autoTrimpSettings.Prestige.selected = "Polierarm";
+           document.getElementById('Prestige').selectedIndex = 2;
+           autoTrimpSettings.Prestige.selected = "Dagadder";
        } else {
            document.getElementById('Prestige').selectedIndex = 13;
            autoTrimpSettings.Prestige.selected = "GambesOP";
