@@ -1549,7 +1549,7 @@ function autoStance() {
             enemyDamage *= 1.25;
         }
         if (game.global.challengeActive == 'Corrupted') {
-            enemyDamage = (1.05 ^ Math.floor(((game.global.world) - 150) / 6))*3*enemyDamage;
+            enemyDamage = (1.05 ^ Math.floor(((game.global.world) - 150) / 6))*3*3*enemyDamage;
         }
         var pierceMod = 0;
         if (game.global.challengeActive == "Lead") pierceMod += (game.challenges.Lead.stacks * 0.001);
@@ -1575,7 +1575,7 @@ function autoStance() {
             enemyDamage *= 1.25;
         }
         if (game.global.challengeActive == 'Corrupted') {
-            enemyDamage = (1.05 ^ Math.floor(((game.global.world) - 150) / 6))*3*enemyDamage;
+            enemyDamage = (1.05 ^ Math.floor(((game.global.world) - 150) / 6))*3*3*enemyDamage;
         }
         var dDamage = enemyDamage - baseBlock / 2 > 0 ? enemyDamage - baseBlock / 2 : 0;
         var dVoidCritDamage = enemyDamage*5 - baseBlock / 2 > 0 ? enemyDamage*5 - baseBlock / 2 : 0;
