@@ -1796,9 +1796,9 @@ function autoMap() {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
-        if ((game.global.mapBonus <= 0 && game.global.world > 163 && game.global.world < 175) ||
-        (game.global.mapBonus <= 1 && game.global.world > 175 && game.global.world < 181) ||
-        (game.global.mapBonus <= 3 && game.global.world > 180 && game.global.world < 190) ||
+        if ((game.global.mapBonus <= 0 && game.global.world > 163 && game.global.world < 178) ||
+        (game.global.mapBonus <= 1 && game.global.world > 177 && game.global.world < 185) ||
+        (game.global.mapBonus <= 5 && game.global.world > 184 && game.global.world < 190) ||
         (game.global.mapBonus <= 8 && game.global.world > 189 && game.global.world < 191)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
@@ -2070,7 +2070,7 @@ function autoMap() {
                 if (shouldDoMap != "world") {
                     //if shouldFarm, don't switch until after megamining //genBTC changed.
                     if (!game.global.switchToMaps){
-                        if ((shouldDoMaps && game.global.lastClearedCell < 10 && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.99) || (shouldFarm && game.global.lastClearedCell >= 81) || (needPrestige && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.98)|| doVoids || shouldDoMap!="world")
+                        if ((shouldDoMaps && game.global.lastClearedCell < 10 && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999) || (shouldFarm && game.global.lastClearedCell >= 81) || (needPrestige && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.995)|| doVoids || shouldDoMap!="world")
                             mapsClicked();
                     }
                     ////Get Impatient/Abandon if: need prestige / _NEED_ to do void maps / on lead in odd world. AND a new army is ready, OR _need_ to void map OR lead farming and we're almost done with the zone )
