@@ -30,6 +30,16 @@ var letItGo = 0;
 var Gigas = 0;
 var WarpstationWall = false;
 var AVP = 0;
+var DoBionic = true;
+var DoBionic_II = true;
+var DoBionic_III = true;
+var DoBionic_IV = true;
+var DoBionic_V = true;
+var DoBionic_VI = true;
+var DoBionic_VII = true;
+var DoBionic_VIII = true;
+var DoBionic_IX = true;
+var DoBionic_X = true;
 
 
 var noFight = 0;
@@ -1809,10 +1819,10 @@ function autoMap() {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
-        if ((game.global.mapBonus <= 0 && game.global.world > 200 && game.global.world < 211) ||
-        (game.global.mapBonus <= 3 && game.global.world > 210 && game.global.world < 221) ||
-        (game.global.mapBonus <= 8 && game.global.world > 220 && game.global.world < 231) ||
-        (game.global.mapBonus <= 8 && game.global.world > 200 && game.global.world >= autoTrimpSettings.VoidMaps.value)) {
+        if ((game.global.mapBonus <= 0 && game.global.world >= autoTrimpSettings.VoidMaps.value-25 && game.global.world < autoTrimpSettings.VoidMaps.value-15) ||
+        (game.global.mapBonus <= 3 && game.global.world >= autoTrimpSettings.VoidMaps.value-15 && game.global.world < autoTrimpSettings.VoidMaps.value-5) ||
+        (game.global.mapBonus <= 4 && game.global.world >= autoTrimpSettings.VoidMaps.value-5 && game.global.world < autoTrimpSettings.VoidMaps.value) ||
+        (game.global.mapBonus <= 8 && game.global.world == autoTrimpSettings.VoidMaps.value)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
@@ -1922,6 +1932,80 @@ function autoMap() {
                 if(theMap.name == 'Trimple of Doom' && game.global.challengeActive == "Meditate") {
                     shouldDoMap = theMap.id;
                     break;
+                }
+                //run all the bionic maps
+                if (game.global.world >= 230 &&
+                ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland VIII') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world >= 215 && DoBionic_VII == true &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland VII') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world >= 200 && (DoBionic_VI == true ||
+                ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15) &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland VI') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world >= 185 && DoBionic_V == true &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland V') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world >= 175 && DoBionic_IV == true &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland IV') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world <= 155 && DoBionic_III == true &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland III') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world <= 140 && DoBionic_II == true &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland II') {
+                    shouldDoMap = theMap.id;
+                    break;
+                } else if { (game.global.world >= 125 && DoBionic == true &&
+                game.global.lastClearedCell > 70 &&
+                theMap.name == 'Bionic Wonderland') {
+                    shouldDoMap = theMap.id;
+                    break;
+                }
+                if (theMap.name == 'Bionic Wonderland' && game.global.lastClearedMapCell >10)
+                DoBionic = false;
+                }
+                if (theMap.name == 'Bionic Wonderland II' && game.global.lastClearedMapCell >10)
+                DoBionic_II = false;
+                }
+                if (theMap.name == 'Bionic Wonderland III' && game.global.lastClearedMapCell >10)
+                DoBionic_III = false;
+                }
+                if (theMap.name == 'Bionic Wonderland IV' && game.global.lastClearedMapCell >10)
+                DoBionic_IV = false;
+                }
+                if (theMap.name == 'Bionic Wonderland V' && game.global.lastClearedMapCell >10)
+                DoBionic_V = false;
+                }
+                if (theMap.name == 'Bionic Wonderland VI' && game.global.lastClearedMapCell >10)
+                DoBionic_VI = false;
+                }
+                if (theMap.name == 'Bionic Wonderland VII' && game.global.lastClearedMapCell >10)
+                DoBionic_VII = false;
+                }
+                if (theMap.name == 'Bionic Wonderland VIII' && game.global.lastClearedMapCell >10)
+                DoBionic_VIII = false;
+                }
+                if (theMap.name == 'Bionic Wonderland IX' && game.global.lastClearedMapCell >10)
+                DoBionic_IX = false;
+                }
+                if (theMap.name == 'Bionic Wonderland X' && game.global.lastClearedMapCell >10)
+                DoBionic_X = false;
                 }
 //                if(theMap.name == 'Bionic Wonderland') {
 //                    var wonderlandDifficulty = Math.ceil(theMap.difficulty / 2);
