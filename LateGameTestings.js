@@ -1312,17 +1312,14 @@ function autoLevelEquipment() {
     var enoughHealthE = (baseHealth * 4 > 30 * (enemyDamage - baseBlock / 2 > 0 ? enemyDamage - baseBlock / 2 : enemyDamage * 0.2) || baseHealth > 30 * (enemyDamage - baseBlock > 0 ? enemyDamage - baseBlock : enemyDamage * 0.2));
     var enoughDamageE = (baseDamage * 4 > enemyHealth);
     
-    //if (game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 25 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 35){
-    //enoughHealthE = false;
-    //enoughDamageE = false;
-    //}
+    if (game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 10 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 25){
+    enoughHealthE = false;
+    enoughDamageE = false;
+    }
     if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
     autoTrimpSettings.GeneticistTimer.value = '90';
-    }
-    if((game.global.world < 200 || game.global.world > 200) && autoTrimpSettings.breedfire.enabled == 0) {
-        toggleautoTrimpSettings('breedfire');
     }
 
     for (var equipName in equipmentList) {
@@ -2296,6 +2293,8 @@ function checkSettings() {
     if (game.global.world > 211 && AVP >= 2) {
     autoTrimpSettings.CustomAutoPortal.value = game.global.world+1;
     autoTrimpSettings.VoidMaps.value = game.global.world;
+    else if (game.global.world > 211 && AVP <= 2) {
+            autoTrimpSettings.VoidMaps.value = 250;
     }
     if (game.global.world < 200) {
         autoTrimpSettings.VoidMaps.value = 190;
