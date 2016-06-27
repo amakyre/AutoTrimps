@@ -1996,13 +1996,13 @@ function autoMap() {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world <= 155 && DoBionic_III == true &&
+                if (game.global.world >= 155 && DoBionic_III == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland III') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world <= 140 && DoBionic_II == true &&
+                if (game.global.world >= 140 && DoBionic_II == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland II') {
                     shouldDoMap = theMap.id;
