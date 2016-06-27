@@ -2390,21 +2390,21 @@ function checkSettings() {
     var portalLevel = -1;
     var leadCheck = false;
     //After Void Portal
-    if (game.global.world == 190 && game.global.lastClearedCell == 90) {
+    if (game.global.world == 9190 && game.global.lastClearedCell == 90) {
         AVP = game.global.totalVoidMaps;
     }
-    if (game.global.world > 200) {
+    if (game.global.world > 9200) {
         AVP = AVP+game.global.totalVoidMaps;
     }
-    if (game.global.world > 211 && AVP >= 9) {
+    if (game.global.world > 9211 && AVP >= 9) {
     autoTrimpSettings.CustomAutoPortal.value = game.global.world+1;
     autoTrimpSettings.VoidMaps.value = game.global.world;
     }
-    else if (game.global.world == 201) {
+    else if (game.global.world == 9201) {
             autoTrimpSettings.VoidMaps.value = 221;
     }
-    if (game.global.world < 200) {
-        autoTrimpSettings.VoidMaps.value = 190;
+    if (game.global.world > 9200) {
+        autoTrimpSettings.VoidMaps.value = 9190;
         autoTrimpSettings.CustomAutoPortal.value = 221;
     }
     switch(autoTrimpSettings.AutoPortal.selected) {
