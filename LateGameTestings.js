@@ -29,6 +29,7 @@ var newCoord = false;
 var letItGo = 0;
 var Gigas = 0;
 var WarpstationWall = false;
+var AVP = 0;
 
 
 var noFight = 0;
@@ -1070,12 +1071,18 @@ function buyStorage() {
        //if(game.global.world > 171 && game.global.world < 179 && game.global.lastClearedCell > 81 && game.global.mapBonus < 10) {
        //     document.getElementById('Prestige').selectedIndex = 6;
         //    autoTrimpSettings.Prestige.selected = "Polierarm";
-       if (game.global.world < 210) {
+       if (game.global.world < 200) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
-       } else {
-           document.getElementById('Prestige').selectedIndex = 13;
-           autoTrimpSettings.Prestige.selected = "GambesOP";
+       } else if (game.global.lastClearedCell < 20) {
+           document.getElementById('Prestige').selectedIndex = 6;
+           autoTrimpSettings.Prestige.selected = "Polierarm";
+       } else if (game.global.lastClearedCell > 20) {
+           document.getElementById('Prestige').selectedIndex = 8;
+           autoTrimpSettings.Prestige.selected = "Axeidic";
+       } else if (game.global.lastClearedCell > 60) {
+           document.getElementById('Prestige').selectedIndex = 12;
+           autoTrimpSettings.Prestige.selected = "Harmbalest";
        }
        //}
        //if (game.global.world == 200 || game.global.world == 201) {
@@ -1802,10 +1809,10 @@ function autoMap() {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
-        if ((game.global.mapBonus <= 0 && game.global.world > 263 && game.global.world < 178) ||
-        (game.global.mapBonus <= 1 && game.global.world > 277 && game.global.world < 185) ||
-        (game.global.mapBonus <= 5 && game.global.world > 284 && game.global.world < 190) ||
-        (game.global.mapBonus <= 8 && game.global.world > 289 && game.global.world < 191)) {
+        if ((game.global.mapBonus <= 0 && game.global.world > 200 && game.global.world < 211) ||
+        (game.global.mapBonus <= 2 && game.global.world > 210 && game.global.world < 221) ||
+        (game.global.mapBonus <= 4 && game.global.world > 220 && game.global.world < 231) ||
+        (game.global.mapBonus <= 8 && game.global.world > 200 && game.global.world >= autoTrimpSettings.VoidMaps.value)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
@@ -2279,6 +2286,18 @@ function autoPortal() {
 function checkSettings() {
     var portalLevel = -1;
     var leadCheck = false;
+    //After Void Portal
+    if (game.global.world > 200) {
+        AVP = game.global.totalVoidMaps;
+    }
+    if (game.global.world > 211 && AVP >= 2) {
+    autoTrimpSettings.CustomAutoPortal.value = game.global.world+1;
+    autoTrimpSettings.VoidMaps.value = game.global.world;
+    }
+    if (game.global.world < 200) {
+        autoTrimpSettings.VoidMaps.value = 190;
+        autoTrimpSettings.CustomAutoPortal.value = 270;
+    }
     switch(autoTrimpSettings.AutoPortal.selected) {
         case "Off":
             break;
