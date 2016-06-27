@@ -2380,6 +2380,7 @@ function checkSettings() {
     //After Void Portal
     if (game.global.world == 190 && game.global.lastClearedCell == 90) {
         AVP = game.global.totalVoidMaps;
+    }
     if (game.global.world > 200) {
         AVP = AVP+game.global.totalVoidMaps;
     }
