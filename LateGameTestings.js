@@ -1976,7 +1976,7 @@ function autoMap() {
                 if (theMap.name == 'Bionic Wonderland X' && game.global.lastClearedMapCell >10) {
                 DoBionic_X = false;
                 }
-                if (game.global.world == 230 && (DoBionic_VII == true ||
+                if (game.global.world == 230 && (DoBionic_VIII == true ||
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15) &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VIII') {
