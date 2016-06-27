@@ -1934,6 +1934,18 @@ function autoMap() {
                     break;
                 }
                 //run all the bionic maps
+                if (game.global.world < 125) {
+                DoBionic = true;
+                DoBionic_II = true;
+                DoBionic_III = true;
+                DoBionic_IV = true;
+                DoBionic_V = true;
+                DoBionic_VI = true;
+                DoBionic_VII = true;
+                DoBionic_VIII = true;
+                DoBionic_IX = true;
+                DoBionic_X = true;
+                }
                 if (theMap.name == 'Bionic Wonderland' && game.global.lastClearedMapCell >10) {
                 DoBionic = false;
                 }
@@ -2115,7 +2127,7 @@ function autoMap() {
         }
 
         //map if we don't have health/dmg or we need to clear void maps or if we are prestige mapping, and our set item has a new prestige available 
-        if ((shouldDoMaps || doVoids || needPrestige) && ((!game.global.mapsActive && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999) || game.global.lastClearedCell > 81)) {
+        if ((shouldDoMaps || doVoids || needPrestige) && ((game.global.mapsActive || game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999) || game.global.lastClearedCell > 81)) {
             //shouldDoMap = world here if we haven't set it to create yet, meaning we found appropriate high level map, or siphon map
 
             if (shouldDoMap == "world") {
@@ -2174,7 +2186,7 @@ function autoMap() {
                 if (shouldDoMap != "world") {
                     //if shouldFarm, don't switch until after megamining //genBTC changed.
                     if (!game.global.switchToMaps){
-                        if ((shouldDoMaps && game.global.lastClearedCell < 10 && (!game.global.mapsActive && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999)) || (shouldFarm && game.global.lastClearedCell >= 81) || (needPrestige && (!game.global.mapsActive && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.995)) || doVoids || shouldDoMap!="world")
+                        if ((shouldDoMaps && game.global.lastClearedCell < 10 && (game.global.mapsActive || game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999)) || (shouldFarm && game.global.lastClearedCell >= 81) || (needPrestige && (game.global.mapsActive || game.resources.trimps.owned > game.resources.trimps.realMax() * 0.995)) || doVoids || shouldDoMap!="world")
                             mapsClicked();
                     }
                     ////Get Impatient/Abandon if: need prestige / _NEED_ to do void maps / on lead in odd world. AND a new army is ready, OR _need_ to void map OR lead farming and we're almost done with the zone )
