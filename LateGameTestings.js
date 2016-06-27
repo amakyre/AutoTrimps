@@ -1940,38 +1940,45 @@ function autoMap() {
                 theMap.name == 'Bionic Wonderland VIII') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world >= 215 && DoBionic_VII == true &&
+                }
+                if { (game.global.world >= 215 && DoBionic_VII == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VII') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world >= 200 && (DoBionic_VI == true ||
+                }
+                if { (game.global.world >= 200 && (DoBionic_VI == true ||
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15) &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VI') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world >= 185 && DoBionic_V == true &&
+                }
+                if { (game.global.world >= 185 && DoBionic_V == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland V') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world >= 175 && DoBionic_IV == true &&
+                }
+                if { (game.global.world >= 175 && DoBionic_IV == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland IV') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world <= 155 && DoBionic_III == true &&
+                }
+                if { (game.global.world <= 155 && DoBionic_III == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland III') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world <= 140 && DoBionic_II == true &&
+                }
+                if { (game.global.world <= 140 && DoBionic_II == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland II') {
                     shouldDoMap = theMap.id;
                     break;
-                } else if { (game.global.world >= 125 && DoBionic == true &&
+                }
+                if { (game.global.world >= 125 && DoBionic == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland') {
                     shouldDoMap = theMap.id;
