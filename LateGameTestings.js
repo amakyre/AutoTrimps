@@ -2378,10 +2378,12 @@ function checkSettings() {
     var portalLevel = -1;
     var leadCheck = false;
     //After Void Portal
-    if (game.global.world > 200) {
+    if (game.global.world == 190 && game.global.lastClearedCell == 90) {
         AVP = game.global.totalVoidMaps;
+    if (game.global.world > 200) {
+        AVP = AVP+game.global.totalVoidMaps;
     }
-    if (game.global.world > 211 && AVP >= 2) {
+    if (game.global.world > 211 && AVP >= 9) {
     autoTrimpSettings.CustomAutoPortal.value = game.global.world+1;
     autoTrimpSettings.VoidMaps.value = game.global.world;
     }
