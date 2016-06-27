@@ -1810,8 +1810,8 @@ function autoMap() {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
         if ((game.global.mapBonus <= 0 && game.global.world > 200 && game.global.world < 211) ||
-        (game.global.mapBonus <= 2 && game.global.world > 210 && game.global.world < 221) ||
-        (game.global.mapBonus <= 4 && game.global.world > 220 && game.global.world < 231) ||
+        (game.global.mapBonus <= 3 && game.global.world > 210 && game.global.world < 221) ||
+        (game.global.mapBonus <= 8 && game.global.world > 220 && game.global.world < 231) ||
         (game.global.mapBonus <= 8 && game.global.world > 200 && game.global.world >= autoTrimpSettings.VoidMaps.value)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
