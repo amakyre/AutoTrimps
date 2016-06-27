@@ -1320,6 +1320,7 @@ function autoLevelEquipment() {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
     autoTrimpSettings.GeneticistTimer.value = '90';
+    autoTrimpSettings.breedfire = true;
     }
 
     for (var equipName in equipmentList) {
