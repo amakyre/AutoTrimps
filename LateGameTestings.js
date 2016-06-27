@@ -1074,13 +1074,13 @@ function buyStorage() {
        if (game.global.world < 200) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
-       } else if (game.global.lastClearedCell < 20) {
+       } else if (game.global.world == 200 && game.global.lastClearedCell < 20) {
            document.getElementById('Prestige').selectedIndex = 6;
            autoTrimpSettings.Prestige.selected = "Polierarm";
-       } else if (game.global.lastClearedCell > 60) {
+       } else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
            document.getElementById('Prestige').selectedIndex = 12;
            autoTrimpSettings.Prestige.selected = "Harmbalest";
-       } else if (game.global.lastClearedCell < 60) {
+       } else if (game.global.world == 200 && game.global.lastClearedCell < 60) {
            document.getElementById('Prestige').selectedIndex = 8;
            autoTrimpSettings.Prestige.selected = "Axeidic";
        }
