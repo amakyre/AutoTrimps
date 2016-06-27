@@ -1964,20 +1964,20 @@ function autoMap() {
                 if (theMap.name == 'Bionic Wonderland X' && game.global.lastClearedMapCell >10) {
                 DoBionic_X = false;
                 }
-                if (game.global.world >= 230 &&
+                if (game.global.world == 230 && DoBionic_VII == true &&
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VIII') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 215 && DoBionic_VII == true &&
+                if (game.global.world == 215 && DoBionic_VII == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VII') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 200 && (DoBionic_VI == true ||
+                if (game.global.world == 200 && (DoBionic_VI == true ||
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15) &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VI') {
