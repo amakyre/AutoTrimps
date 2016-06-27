@@ -1077,12 +1077,12 @@ function buyStorage() {
        } else if (game.global.lastClearedCell < 20) {
            document.getElementById('Prestige').selectedIndex = 6;
            autoTrimpSettings.Prestige.selected = "Polierarm";
-       } else if (game.global.lastClearedCell > 20) {
-           document.getElementById('Prestige').selectedIndex = 8;
-           autoTrimpSettings.Prestige.selected = "Axeidic";
        } else if (game.global.lastClearedCell > 60) {
            document.getElementById('Prestige').selectedIndex = 12;
            autoTrimpSettings.Prestige.selected = "Harmbalest";
+       } else if (game.global.lastClearedCell < 60) {
+           document.getElementById('Prestige').selectedIndex = 8;
+           autoTrimpSettings.Prestige.selected = "Axeidic";
        }
        //}
        //if (game.global.world == 200 || game.global.world == 201) {
