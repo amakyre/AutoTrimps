@@ -2293,6 +2293,7 @@ function checkSettings() {
     if (game.global.world > 211 && AVP >= 2) {
     autoTrimpSettings.CustomAutoPortal.value = game.global.world+1;
     autoTrimpSettings.VoidMaps.value = game.global.world;
+    }
     else if (game.global.world > 211 && AVP <= 2) {
             autoTrimpSettings.VoidMaps.value = 250;
     }
