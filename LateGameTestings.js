@@ -1934,7 +1934,6 @@ function autoMap() {
                     break;
                 }
                 //run all the bionic maps
-            }
                 if (theMap.name == 'Bionic Wonderland' && game.global.lastClearedMapCell >10) {
                 DoBionic = false;
                 }
