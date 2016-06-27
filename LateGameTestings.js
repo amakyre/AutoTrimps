@@ -1320,7 +1320,9 @@ function autoLevelEquipment() {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
     autoTrimpSettings.GeneticistTimer.value = '90';
-    autoTrimpSettings.breedfire = true;
+    }
+    if((game.global.world < 200 || game.global.world > 200) && game.options.menu.breedfire.enabled == 0) {
+        toggleSetting('breedfire');
     }
 
     for (var equipName in equipmentList) {
