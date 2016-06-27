@@ -914,7 +914,7 @@ function easyMode() {
         autoTrimpSettings.FarmerRatio.value = '10';
         autoTrimpSettings.LumberjackRatio.value = '2';
         autoTrimpSettings.MinerRatio.value = '20';
-        } else if (game.buildings.Tribute.owned < 2100 && game.buildings.Tribute.owned > 1100) {
+        } else if (game.buildings.Tribute.owned < 2100 && game.buildings.Tribute.owned >= 1100) {
         autoTrimpSettings.FarmerRatio.value = '5';
         autoTrimpSettings.LumberjackRatio.value = '2';
         autoTrimpSettings.MinerRatio.value = '25';
