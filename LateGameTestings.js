@@ -1984,34 +1984,34 @@ function autoMap() {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (theMap.name == 'Bionic Wonderland' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland' && game.global.lastClearedMapCell >10) {
                 DoBionic = false;
                 }
-                if (theMap.name == 'Bionic Wonderland II' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland II' && game.global.lastClearedMapCell >10) {
                 DoBionic_II = false;
                 }
-                if (theMap.name == 'Bionic Wonderland III' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland III' && game.global.lastClearedMapCell >10) {
                 DoBionic_III = false;
                 }
-                if (theMap.name == 'Bionic Wonderland IV' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland IV' && game.global.lastClearedMapCell >10) {
                 DoBionic_IV = false;
                 }
-                if (theMap.name == 'Bionic Wonderland V' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland V' && game.global.lastClearedMapCell >10) {
                 DoBionic_V = false;
                 }
-                if (theMap.name == 'Bionic Wonderland VI' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland VI' && game.global.lastClearedMapCell >10) {
                 DoBionic_VI = false;
                 }
-                if (theMap.name == 'Bionic Wonderland VII' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland VII' && game.global.lastClearedMapCell >10) {
                 DoBionic_VII = false;
                 }
-                if (theMap.name == 'Bionic Wonderland VIII' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland VIII' && game.global.lastClearedMapCell >10) {
                 DoBionic_VIII = false;
                 }
-                if (theMap.name == 'Bionic Wonderland IX' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland IX' && game.global.lastClearedMapCell >10) {
                 DoBionic_IX = false;
                 }
-                if (theMap.name == 'Bionic Wonderland X' && game.global.lastClearedMapCell >10)
+                if (theMap.name == 'Bionic Wonderland X' && game.global.lastClearedMapCell >10) {
                 DoBionic_X = false;
                 }
 //                if(theMap.name == 'Bionic Wonderland') {
