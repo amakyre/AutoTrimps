@@ -2295,11 +2295,11 @@ function checkSettings() {
     autoTrimpSettings.VoidMaps.value = game.global.world;
     }
     else if (game.global.world == 201) {
-            autoTrimpSettings.VoidMaps.value = 235;
+            autoTrimpSettings.VoidMaps.value = 221;
     }
     if (game.global.world < 200) {
         autoTrimpSettings.VoidMaps.value = 190;
-        autoTrimpSettings.CustomAutoPortal.value = 236;
+        autoTrimpSettings.CustomAutoPortal.value = 221;
     }
     switch(autoTrimpSettings.AutoPortal.selected) {
         case "Off":
