@@ -2115,7 +2115,7 @@ function autoMap() {
         }
 
         //map if we don't have health/dmg or we need to clear void maps or if we are prestige mapping, and our set item has a new prestige available 
-        if (shouldDoMaps || doVoids || needPrestige) {
+        if ((shouldDoMaps || doVoids || needPrestige) && (game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999 || game.global.lastClearedCell > 81)) {
             //shouldDoMap = world here if we haven't set it to create yet, meaning we found appropriate high level map, or siphon map
 
             if (shouldDoMap == "world") {
