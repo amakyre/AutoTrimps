@@ -1322,7 +1322,7 @@ function autoLevelEquipment() {
     var enoughHealthE = (baseHealth * 4 > 30 * (enemyDamage - baseBlock / 2 > 0 ? enemyDamage - baseBlock / 2 : enemyDamage * 0.2) || baseHealth > 30 * (enemyDamage - baseBlock > 0 ? enemyDamage - baseBlock : enemyDamage * 0.2));
     var enoughDamageE = (baseDamage * 4 > enemyHealth);
     
-    if (game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 15 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20){
+    if (game.global.world == 200) { //&& ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 10 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20){
     enoughHealthE = false;
     enoughDamageE = false;
     }
@@ -1519,7 +1519,7 @@ function manualLabor() {
 function autoStance() {
     if (game.global.gridArray.length === 0) return;
     var missingHealth = game.global.soldierHealthMax - game.global.soldierHealth;
-    if (game.global.world == 200 && !game.global.mapsActive) {
+    if (game.global.world == 200) {
         var newSquadRdy = false;
     } else {
         var newSquadRdy = game.resources.trimps.realMax() <= game.resources.trimps.owned + 1;
@@ -1565,9 +1565,7 @@ function autoStance() {
         if (game.global.challengeActive == 'Watch') {
             enemyDamage *= 1.25;
         }
-        if (game.global.challengeActive == 'Corrupted') {
-            enemyDamage = (1.05 ^ Math.floor(((game.global.world) - 150) / 6))*3*3*enemyDamage;
-        }
+
         var pierceMod = 0;
         if (game.global.challengeActive == "Lead") pierceMod += (game.challenges.Lead.stacks * 0.001);
         var dDamage = enemyDamage - baseBlock / 2 > enemyDamage * (0.2 + pierceMod) ? enemyDamage - baseBlock / 2 : enemyDamage * (0.2 + pierceMod);
@@ -1591,9 +1589,7 @@ function autoStance() {
         if (game.global.challengeActive == 'Watch') {
             enemyDamage *= 1.25;
         }
-        if (game.global.challengeActive == 'Corrupted') {
-            enemyDamage = (1.05 ^ Math.floor(((game.global.world) - 150) / 6))*3*3*enemyDamage;
-        }
+
         var dDamage = enemyDamage - baseBlock / 2 > 0 ? enemyDamage - baseBlock / 2 : 0;
         var dVoidCritDamage = enemyDamage*5 - baseBlock / 2 > 0 ? enemyDamage*5 - baseBlock / 2 : 0;
         var dHealth = baseHealth/2;
@@ -1822,7 +1818,11 @@ function autoMap() {
         if ((game.global.mapBonus <= 0 && game.global.world >= autoTrimpSettings.VoidMaps.value-25 && game.global.world < autoTrimpSettings.VoidMaps.value-15) ||
         (game.global.mapBonus <= 3 && game.global.world >= autoTrimpSettings.VoidMaps.value-15 && game.global.world < autoTrimpSettings.VoidMaps.value-5) ||
         (game.global.mapBonus <= 4 && game.global.world >= autoTrimpSettings.VoidMaps.value-5 && game.global.world < autoTrimpSettings.VoidMaps.value) ||
-        (game.global.mapBonus <= 8 && game.global.world == autoTrimpSettings.VoidMaps.value)) {
+        (game.global.mapBonus <= 8 && game.global.world == autoTrimpSettings.VoidMaps.value) ||
+        (game.global.mapBonus <= 0 && game.global.world >= 190-25 && game.global.world < 190-15) ||
+        (game.global.mapBonus <= 3 && game.global.world >= 190-15 && game.global.world < 190-5) ||
+        (game.global.mapBonus <= 4 && game.global.world >= 190-5 && game.global.world < 190) ||
+        (game.global.mapBonus <= 8 && game.global.world == 190) ||) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
@@ -1976,51 +1976,51 @@ function autoMap() {
                 if (theMap.name == 'Bionic Wonderland X' && game.global.lastClearedMapCell >10) {
                 DoBionic_X = false;
                 }
-                if (game.global.world == 230 && (DoBionic_VIII == true ||
+                if (game.global.world == 9230 && (DoBionic_VIII == true ||
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15) &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VIII') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world == 215 && DoBionic_VII == true &&
+                if (game.global.world == 9215 && DoBionic_VII == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VII') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world == 200 && (DoBionic_VI == true ||
+                if (game.global.world == 9200 && (DoBionic_VI == true ||
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 25) &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VI') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 185 && DoBionic_V == true &&
+                if (game.global.world >= 9185 && DoBionic_V == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland V') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 175 && DoBionic_IV == true &&
+                if (game.global.world >= 9175 && DoBionic_IV == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland IV') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 155 && DoBionic_III == true &&
+                if (game.global.world >= 9155 && DoBionic_III == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland III') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 140 && DoBionic_II == true &&
+                if (game.global.world >= 9140 && DoBionic_II == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland II') {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world >= 125 && DoBionic == true &&
+                if (game.global.world >= 9125 && DoBionic == true &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland') {
                     shouldDoMap = theMap.id;
@@ -2127,7 +2127,7 @@ function autoMap() {
         }
 
         //map if we don't have health/dmg or we need to clear void maps or if we are prestige mapping, and our set item has a new prestige available 
-        if ((shouldDoMaps || doVoids || needPrestige) && ((game.global.mapsActive || game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999) || game.global.lastClearedCell > 81)) {
+        if (shouldDoMaps || doVoids || needPrestige) {
             //shouldDoMap = world here if we haven't set it to create yet, meaning we found appropriate high level map, or siphon map
 
             if (shouldDoMap == "world") {
@@ -2186,13 +2186,14 @@ function autoMap() {
                 if (shouldDoMap != "world") {
                     //if shouldFarm, don't switch until after megamining //genBTC changed.
                     if (!game.global.switchToMaps){
-                        if (game.global.world !=200 && ((shouldDoMaps && game.global.lastClearedCell < 10 && (game.global.mapsActive || game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999)) || (shouldFarm && game.global.lastClearedCell >= 81) || (needPrestige && (game.global.mapsActive || game.resources.trimps.owned > game.resources.trimps.realMax() * 0.995)) || doVoids || shouldDoMap!="world"))
+                        if ((shouldDoMaps && game.global.lastClearedCell < 10 && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999) || (shouldFarm && game.global.lastClearedCell >= 81) || (needPrestige && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999)|| doVoids || shouldDoMap!="world")
                             mapsClicked();
                     }
                     ////Get Impatient/Abandon if: need prestige / _NEED_ to do void maps / on lead in odd world. AND a new army is ready, OR _need_ to void map OR lead farming and we're almost done with the zone )
-                    if(game.global.switchToMaps 
-                        && (game.global.world !=200 || (game.global.world ==200 && game.global.soldierHealth ==0))
-                        &&(needPrestige || doVoids || (game.global.challengeActive == 'Lead' && game.global.world % 2 == 1)) 
+                    if(
+                        game.global.switchToMaps 
+                        && 
+                        (needPrestige || doVoids || (game.global.challengeActive == 'Lead' && game.global.world % 2 == 1)) 
                         && 
                             (
                             (game.resources.trimps.realMax() <= game.resources.trimps.owned + 1)
@@ -2204,7 +2205,7 @@ function autoMap() {
                     }
                 }
                 //forcibly run watch maps
-                if ((shouldDoWatchMaps||shouldDoNullMaps) && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999 && !game.global.mapsActive)
+                if ((shouldDoWatchMaps||shouldDoNullMaps) && (game.global.world !=200 || game.global.lastClearedCell > 90) && game.resources.trimps.owned > game.resources.trimps.realMax() * 0.9999 )
                     mapsClicked();                
             }
         } else if (game.global.preMapsActive) {
