@@ -2192,7 +2192,7 @@ function autoMap() {
                     ////Get Impatient/Abandon if: need prestige / _NEED_ to do void maps / on lead in odd world. AND a new army is ready, OR _need_ to void map OR lead farming and we're almost done with the zone )
                     if(
                         game.global.switchToMaps 
-                        && game.global.world !=200 &&
+                        && (game.global.world !=200 || (game.global.world ==200 && game.global.soldierHealth ==0))
                         (needPrestige || doVoids || (game.global.challengeActive == 'Lead' && game.global.world % 2 == 1)) 
                         && 
                             (
