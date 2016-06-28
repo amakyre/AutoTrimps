@@ -1093,6 +1093,9 @@ function buyStorage() {
        } else if (game.global.world == 200 && game.global.lastClearedCell < 60) {
            document.getElementById('Prestige').selectedIndex = 8;
            autoTrimpSettings.Prestige.selected = "Axeidic";
+       } else if (game.global.world > 200) {
+           document.getElementById('Prestige').selectedIndex = 0;
+           autoTrimpSettings.Prestige.selected = "Off";
        }
        //}
        //if (game.global.world == 200 || game.global.world == 201) {
