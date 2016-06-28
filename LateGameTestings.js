@@ -1818,24 +1818,23 @@ function autoMap() {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
-        if ((game.global.mapBonus <= 0 && game.global.world >= autoTrimpSettings.VoidMaps.value-25 && game.global.world < autoTrimpSettings.VoidMaps.value-15) ||
-        (game.global.mapBonus <= 3 && game.global.world >= autoTrimpSettings.VoidMaps.value-15 && game.global.world < autoTrimpSettings.VoidMaps.value-5) ||
-        (game.global.mapBonus <= 4 && game.global.world >= autoTrimpSettings.VoidMaps.value-5 && game.global.world < autoTrimpSettings.VoidMaps.value) ||
-        (game.global.mapBonus <= 8 && game.global.world == autoTrimpSettings.VoidMaps.value) ||
-        (game.global.mapBonus <= 1 && game.global.world >= 165 && game.global.world < 175) ||
-        (game.global.mapBonus <= 4 && game.global.world >= 175 && game.global.world < 185) ||
-        (game.global.mapBonus <= 5 && game.global.world >= 185 && game.global.world < 190) ||
-        (game.global.mapBonus <= 8 && game.global.world == 190) ||
-        (game.global.mapBonus <= 1 && game.global.world >= 195 && game.global.world < 200)) {
+    //    if ((game.global.mapBonus <= 0 && game.global.world >= autoTrimpSettings.VoidMaps.value-25 && game.global.world < autoTrimpSettings.VoidMaps.value-15) ||
+    //    (game.global.mapBonus <= 3 && game.global.world >= autoTrimpSettings.VoidMaps.value-15 && game.global.world < autoTrimpSettings.VoidMaps.value-5) ||
+    //    (game.global.mapBonus <= 4 && game.global.world >= autoTrimpSettings.VoidMaps.value-5 && game.global.world < autoTrimpSettings.VoidMaps.value) ||
+    //    (game.global.mapBonus <= 8 && game.global.world == autoTrimpSettings.VoidMaps.value) ||
+    //    (game.global.mapBonus <= 1 && game.global.world >= 165 && game.global.world < 175) ||
+    //    (game.global.mapBonus <= 4 && game.global.world >= 175 && game.global.world < 185) ||
+    //    (game.global.mapBonus <= 5 && game.global.world >= 185 && game.global.world < 190) ||
+    //    (game.global.mapBonus <= 8 && game.global.world == 190) ||
+    //    (game.global.mapBonus <= 1 && game.global.world >= 195 && game.global.world < 200)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
-            shouldDoMaps = true;
-            shouldDoNullMaps = true;
-            console.log("now null running = true");
-
-        }
-        shouldFarm = shouldDoNullMaps ? true : shouldFarm;
-        enoughDamage = shouldDoNullMaps ? true : enoughDamage;
-        enoughHealth = shouldDoNullMaps ? true : enoughHealth;
+    //        shouldDoMaps = true;
+    //        shouldDoNullMaps = true;
+    //        console.log("now null running = true");
+    //    }
+    //    shouldFarm = shouldDoNullMaps ? true : shouldFarm;
+    //    enoughDamage = shouldDoNullMaps ? true : enoughDamage;
+    //    enoughHealth = shouldDoNullMaps ? true : enoughHealth;
         //Create siphonology on demand section.
         var siphlvl = game.global.world - game.portal.Siphonology.level;
 
