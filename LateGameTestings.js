@@ -1818,7 +1818,7 @@ function autoMap() {
         //if ((game.global.mapBonus < 2 && game.global.world > 165 && game.global.world < 171 && game.global.world != 170 && game.global.world != 200) ||
         //////(game.global.mapBonus < 5 && game.global.world > 170 && game.global.world < 201 && game.global.world != 170 && game.global.world != 185 && game.global.world != 200) ||
         //////(game.global.mapBonus < 9 && game.global.world > 180 && game.global.world < 191 && game.global.world != 185 && game.global.world != 200) ||
-        (game.global.mapBonus < 9 && (game.global.world == 200 || game.global.world == 211))) {
+        (game.global.mapBonus < 9 && (game.global.world == 200 || game.global.world >= 210))) {
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
