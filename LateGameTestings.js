@@ -1079,7 +1079,7 @@ function buyStorage() {
         //   document.getElementById('Prestige').selectedIndex = 12;
         //   autoTrimpSettings.Prestige.selected = "Harmbalest";
        //} else if ((getPageSetting('VoidMaps')) > game.global.world && game.global.world >= (getPageSetting('VoidMaps')-10) && game.global.lastClearedCell > 79 && game.global.mapBonus >= 9-IDontNeedFarm) {
-        //   document.getElementById('Prestige').selectedIndex = 2;
+        //   document.getElementById('Prestige').selectedIndex = 11;
         //   autoTrimpSettings.Prestige.selected = "Bestplate";
        //}
        //if(game.global.world > 171 && game.global.world < 179 && game.global.lastClearedCell > 81 && game.global.mapBonus < 10) {
@@ -1095,8 +1095,8 @@ function buyStorage() {
        //    document.getElementById('Prestige').selectedIndex = 13;
        //    autoTrimpSettings.Prestige.selected = "GambesOP";
        } else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
-           document.getElementById('Prestige').selectedIndex = 13;
-           autoTrimpSettings.Prestige.selected = "GambesOP";
+           document.getElementById('Prestige').selectedIndex = 11;
+           autoTrimpSettings.Prestige.selected = "Bestplate";
        } else if (game.global.world > 200) {
            document.getElementById('Prestige').selectedIndex = 0;
            autoTrimpSettings.Prestige.selected = "Off";
@@ -1830,7 +1830,7 @@ function autoMap() {
     //    (game.global.mapBonus <= 4 && game.global.world >= 175 && game.global.world < 185) ||
     //    (game.global.mapBonus <= 5 && game.global.world >= 185 && game.global.world < 190) ||
     //    (game.global.mapBonus <= 8 && game.global.world == 190) ||
-        (game.global.mapBonus < game.global.world-(game.portal.Coordinated.level+1) && game.global.world >= 160 && game.global.mapBonus <= 8)) {
+        (game.global.mapBonus < game.global.world-(game.portal.Coordinated.level+1) && game.global.world >= 180 && game.global.world <= 190 game.global.mapBonus <= 8)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
