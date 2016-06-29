@@ -1094,9 +1094,9 @@ function buyStorage() {
        //} else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
        //    document.getElementById('Prestige').selectedIndex = 13;
        //    autoTrimpSettings.Prestige.selected = "GambesOP";
-       //} else if (game.global.world == 200 && game.global.lastClearedCell < 60) {
-       //    document.getElementById('Prestige').selectedIndex = 6;
-       //    autoTrimpSettings.Prestige.selected = "Polierarm";
+       } else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
+           document.getElementById('Prestige').selectedIndex = 6;
+           autoTrimpSettings.Prestige.selected = "Polierarm";
        } else if (game.global.world > 200) {
            document.getElementById('Prestige').selectedIndex = 0;
            autoTrimpSettings.Prestige.selected = "Off";
@@ -1997,7 +1997,7 @@ function autoMap() {
                     break;
                 }
                 if (game.global.world == 200 && (DoBionic_VI == true ||
-                ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10) &&
+                ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15) &&
                 game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VI') {
                     shouldDoMap = theMap.id;
