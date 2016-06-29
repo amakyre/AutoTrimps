@@ -755,6 +755,7 @@ function evaluateEfficiency(equipName) {
     (gameResource.level > 11)) {
         Res = 0;
         Wall = true;
+        WarpstationWall = true;
     }
     return {
         Stat: equip.Stat,
