@@ -1818,7 +1818,7 @@ function autoMap() {
         //if ((game.global.mapBonus < 2 && game.global.world > 165 && game.global.world < 171 && game.global.world != 170 && game.global.world != 200) ||
         //////(game.global.mapBonus < 5 && game.global.world > 170 && game.global.world < 201 && game.global.world != 170 && game.global.world != 185 && game.global.world != 200) ||
         //////(game.global.mapBonus < 9 && game.global.world > 180 && game.global.world < 191 && game.global.world != 185 && game.global.world != 200) ||
-        (game.global.mapBonus < 9 && (game.global.world == 200 || game.global.world >= 210)) ||
+        //(game.global.mapBonus < 9 && (game.global.world == 200 || game.global.world >= 210)) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 10 && game.global.lastClearedCell > 20) ||
         //(game.global.world == 200 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 15 && game.global.lastClearedCell > 60) ||
         ///////(game.global.mapBonus < 2 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185))) {
@@ -1826,10 +1826,10 @@ function autoMap() {
     //    (game.global.mapBonus <= 3 && game.global.world >= autoTrimpSettings.VoidMaps.value-15 && game.global.world < autoTrimpSettings.VoidMaps.value-5) ||
     //    (game.global.mapBonus <= 4 && game.global.world >= autoTrimpSettings.VoidMaps.value-5 && game.global.world < autoTrimpSettings.VoidMaps.value) ||
     //    (game.global.mapBonus <= 8 && game.global.world == autoTrimpSettings.VoidMaps.value) ||
-    //    (game.global.mapBonus <= 1 && game.global.world >= 165 && game.global.world < 175) ||
-    //    (game.global.mapBonus <= 4 && game.global.world >= 175 && game.global.world < 185) ||
-    //    (game.global.mapBonus <= 5 && game.global.world >= 185 && game.global.world < 190) ||
-    //    (game.global.mapBonus <= 8 && game.global.world == 190) ||
+        (game.global.mapBonus <= 0 && game.global.world >= 207 && game.global.world < 212) ||
+        (game.global.mapBonus <= 1 && game.global.world >= 212 && game.global.world < 222) ||
+        (game.global.mapBonus <= 3 && game.global.world >= 222 && game.global.world < 230) ||
+        (game.global.mapBonus <= 8 && game.global.world == 230) ||
         (game.global.world >= 182 && game.global.world <= 190 && game.global.mapBonus <= 2)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
