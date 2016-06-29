@@ -1830,7 +1830,7 @@ function autoMap() {
     //    (game.global.mapBonus <= 4 && game.global.world >= 175 && game.global.world < 185) ||
     //    (game.global.mapBonus <= 5 && game.global.world >= 185 && game.global.world < 190) ||
     //    (game.global.mapBonus <= 8 && game.global.world == 190) ||
-        (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1) && game.global.world >= 180 && game.global.world <= 190 && game.global.mapBonus <= 8)) {
+        (game.global.world >= 182 && game.global.world <= 190 && game.global.mapBonus <= 2)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
