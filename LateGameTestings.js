@@ -752,7 +752,7 @@ function evaluateEfficiency(equipName) {
     }
     // a test
     if ((gameResource.prestige < ((game.global.world-10)/5)+2) ||
-    (gameResource.level > 12)) {
+    (gameResource.level > 11)) {
         Res = 0;
         Wall = true;
     }
