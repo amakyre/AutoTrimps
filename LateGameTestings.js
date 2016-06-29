@@ -1830,7 +1830,7 @@ function autoMap() {
     //    (game.global.mapBonus <= 4 && game.global.world >= 175 && game.global.world < 185) ||
     //    (game.global.mapBonus <= 5 && game.global.world >= 185 && game.global.world < 190) ||
     //    (game.global.mapBonus <= 8 && game.global.world == 190) ||
-        (game.global.mapBonus < game.global.world-game.portal.Coordinated.level && game.global.world >= 160)) {
+        (game.global.mapBonus < game.global.world-game.portal.Coordinated.level+1 && game.global.world >= 160 && game.global.mapBonus <= 8)) {
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
