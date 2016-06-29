@@ -1076,8 +1076,8 @@ function buyStorage() {
         //   document.getElementById('Prestige').selectedIndex = 6;
         //   autoTrimpSettings.Prestige.selected = "Polierarm";
        //} else if ((getPageSetting('VoidMaps')) > game.global.world && game.global.world >= (getPageSetting('VoidMaps')-10) && game.global.lastClearedCell > 79 && game.global.mapBonus < 9-IDontNeedFarm) {
-        //   document.getElementById('Prestige').selectedIndex = 13;
-        //   autoTrimpSettings.Prestige.selected = "GambesOP";
+        //   document.getElementById('Prestige').selectedIndex = 12;
+        //   autoTrimpSettings.Prestige.selected = "Harmbalest";
        //} else if ((getPageSetting('VoidMaps')) > game.global.world && game.global.world >= (getPageSetting('VoidMaps')-10) && game.global.lastClearedCell > 79 && game.global.mapBonus >= 9-IDontNeedFarm) {
         //   document.getElementById('Prestige').selectedIndex = 2;
         //   autoTrimpSettings.Prestige.selected = "Bestplate";
@@ -1095,8 +1095,8 @@ function buyStorage() {
        //    document.getElementById('Prestige').selectedIndex = 13;
        //    autoTrimpSettings.Prestige.selected = "GambesOP";
        } else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
-           document.getElementById('Prestige').selectedIndex = 12;
-           autoTrimpSettings.Prestige.selected = "Harmbalest";
+           document.getElementById('Prestige').selectedIndex = 13;
+           autoTrimpSettings.Prestige.selected = "GambesOP";
        } else if (game.global.world > 200) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
