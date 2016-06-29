@@ -1098,8 +1098,8 @@ function buyStorage() {
            document.getElementById('Prestige').selectedIndex = 11;
            autoTrimpSettings.Prestige.selected = "Bestplate";
        } else if (game.global.world > 200) {
-           document.getElementById('Prestige').selectedIndex = 0;
-           autoTrimpSettings.Prestige.selected = "Off";
+           document.getElementById('Prestige').selectedIndex = 2;
+           autoTrimpSettings.Prestige.selected = "Dagadder";
        }
        //}
        //if (game.global.world == 200 || game.global.world == 201) {
