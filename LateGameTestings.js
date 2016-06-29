@@ -756,12 +756,6 @@ function evaluateEfficiency(equipName) {
         Res = 0;
         Wall = true;
     }
-    if (gameResource.prestige = ((game.global.world-10)/5)+2) {
-        Res = 0;
-        Wall = true;
-    }
-
-
     return {
         Stat: equip.Stat,
         Factor: Res,
