@@ -746,16 +746,20 @@ function evaluateEfficiency(equipName) {
     if (game.global.world >= 58 && game.global.world < 60 && getPageSetting('WaitTill60')){
         Wall = true;
     }
+    //test - workimg
     if (10*Cos > NextCost) {
         Wall = true;
         WarpstationWall = true;
     }
-    // a test
-    if ((gameResource.prestige < ((game.global.world-10)/5)+2) ||
-    (gameResource.level > 11)) {
+    // a test - working
+    if ((gameResource.prestige < ((game.global.world-10)/5)+2 && gameResource.level > 2) {
         Res = 0;
         Wall = true;
         WarpstationWall = true;
+    }
+    if (gameResource.level > 11) {
+        Res = 0;
+        Wall = true;
     }
     return {
         Stat: equip.Stat,
