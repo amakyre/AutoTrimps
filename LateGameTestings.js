@@ -2528,7 +2528,7 @@ function manageGenes() {
     */
 
     //reset breedFire once we have less than 2 seconds remaining
-    if(getBreedTime(true) < 2) breedFire = false;
+    if(getBreedTime(true) < 0.4) breedFire = false;
 
 }
 
