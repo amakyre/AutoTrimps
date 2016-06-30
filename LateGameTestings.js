@@ -1091,7 +1091,7 @@ function buyStorage() {
        } else if (game.global.world == 200 && game.global.lastClearedCell < 20 && game.global.lastClearedCell > 10) {
            document.getElementById('Prestige').selectedIndex = 5;
            autoTrimpSettings.Prestige.selected = "Hellishmet";
-       } else if (game.global.world == 200 && game.global.lastClearedCell > 69) {
+       } else if (game.global.world == 200 && game.global.lastClearedCell > 80) {
            document.getElementById('Prestige').selectedIndex = 7;
            autoTrimpSettings.Prestige.selected = "Pantastic";
        } else if (game.global.world == 200 && game.global.lastClearedCell < 70) {
