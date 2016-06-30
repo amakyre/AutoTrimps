@@ -1991,7 +1991,7 @@ function autoMap() {
                     shouldDoMap = theMap.id;
                     break;
                 }
-                if (game.global.world == 200 && (DoBionic_VII == true &&
+                if (game.global.world == 200 && (DoBionic_VII == true ||
                 ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20) &&
                 //game.global.lastClearedCell > 70 &&
                 theMap.name == 'Bionic Wonderland VII') {
