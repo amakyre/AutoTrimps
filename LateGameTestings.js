@@ -1091,10 +1091,10 @@ function buyStorage() {
        } else if (game.global.world == 200 && game.global.lastClearedCell < 20 && game.global.lastClearedCell > 10) {
            document.getElementById('Prestige').selectedIndex = 5;
            autoTrimpSettings.Prestige.selected = "Hellishmet";
-       //} else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
-       //    document.getElementById('Prestige').selectedIndex = 4;
-       //    autoTrimpSettings.Prestige.selected = "Megamace";
-       } else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
+       } else if (game.global.world == 200 && game.global.lastClearedCell > 69) {
+           document.getElementById('Prestige').selectedIndex = 7;
+           autoTrimpSettings.Prestige.selected = "Pantastic";
+       } else if (game.global.world == 200 && game.global.lastClearedCell < 70) {
            document.getElementById('Prestige').selectedIndex = 6;
            autoTrimpSettings.Prestige.selected = "Polierarm";
        } else if (game.global.world > 200 || game.global.world > 181 || game.global.world < 191) {
