@@ -1812,9 +1812,9 @@ function autoMap() {
             shouldDoMaps = true;
             shouldDoWatchMaps = true;
         }
-        //here we start doing maps for null its fun (and also for spire)
+        //here we start doing maps for null its fun (and also for spire)(&& game.global.lastClearedCell > 70)
         var shouldDoNullMaps = false;
-        if ((game.global.mapBonus < 1 && game.global.lastClearedCell > 70 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185)) ||
+        if ((game.global.mapBonus < 1 && (game.global.world == 125 || game.global.world == 140 || game.global.world == 155 || game.global.world == 170 || game.global.world == 185)) ||
         //if ((game.global.mapBonus < 2 && game.global.world > 165 && game.global.world < 171 && game.global.world != 170 && game.global.world != 200) ||
         //////(game.global.mapBonus < 5 && game.global.world > 170 && game.global.world < 201 && game.global.world != 170 && game.global.world != 185 && game.global.world != 200) ||
         //////(game.global.mapBonus < 9 && game.global.world > 180 && game.global.world < 191 && game.global.world != 185 && game.global.world != 200) ||
