@@ -1085,7 +1085,7 @@ function buyStorage() {
        //if(game.global.world > 171 && game.global.world < 179 && game.global.lastClearedCell > 81 && game.global.mapBonus < 10) {
        //     document.getElementById('Prestige').selectedIndex = 11;
         //    autoTrimpSettings.Prestige.selected = "Harmbalest";
-       if (game.global.world < 200 &% (game.global.world < 182 || game.global.world > 190)) {
+       if (game.global.world < 200 && (game.global.world < 182 || game.global.world > 190)) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
        } else if (game.global.world == 200 && game.global.lastClearedCell < 20 && game.global.lastClearedCell > 10) {
