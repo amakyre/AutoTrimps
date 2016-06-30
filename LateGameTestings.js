@@ -1095,8 +1095,8 @@ function buyStorage() {
        //    document.getElementById('Prestige').selectedIndex = 13;
        //    autoTrimpSettings.Prestige.selected = "GambesOP";
        } else if (game.global.world == 200 && game.global.lastClearedCell > 60) {
-           document.getElementById('Prestige').selectedIndex = 11;
-           autoTrimpSettings.Prestige.selected = "Bestplate";
+           document.getElementById('Prestige').selectedIndex = 10;
+           autoTrimpSettings.Prestige.selected = "Greatersword";
        } else if (game.global.world > 200) {
            document.getElementById('Prestige').selectedIndex = 0;
            autoTrimpSettings.Prestige.selected = "Off";
@@ -1329,10 +1329,10 @@ function autoLevelEquipment() {
     var enoughHealthE = (baseHealth * 4 > 30 * (enemyDamage - baseBlock / 2 > 0 ? enemyDamage - baseBlock / 2 : enemyDamage * 0.2) || baseHealth > 30 * (enemyDamage - baseBlock > 0 ? enemyDamage - baseBlock : enemyDamage * 0.2));
     var enoughDamageE = (baseDamage * 4 > enemyHealth);
     
-    if (game.global.world == 200) { //&& ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 10 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20){
-    enoughHealthE = false;
-    enoughDamageE = false;
-    }
+    //if (game.global.world == 200) { //&& ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 10 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20){
+    //enoughHealthE = false;
+    //enoughDamageE = false;
+    //}
     if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
