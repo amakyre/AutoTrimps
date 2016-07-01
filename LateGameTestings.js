@@ -757,7 +757,12 @@ function evaluateEfficiency(equipName) {
         Wall = true;
         WarpstationWall = true;
     }
-    if (gameResource.level > 11) {
+    if (gameResource.prestige+1 < ((game.global.world-10)/5)+2 && gameResource.level > 0) {
+        Res = 0;
+        Wall = true;
+        WarpstationWall = true;
+    }
+    if (gameResource.level > 11 && gameResource.level != 200) {
         Res = 0;
         Wall = true;
     }
@@ -1093,8 +1098,8 @@ function buyStorage() {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
        } else if (game.global.world == 200 && game.global.lastClearedCell < 71 && game.global.lastClearedCell > 10) {
-           document.getElementById('Prestige').selectedIndex = 5;
-           autoTrimpSettings.Prestige.selected = "Hellishmet";
+           document.getElementById('Prestige').selectedIndex = 4;
+           autoTrimpSettings.Prestige.selected = "Megamace";
        //} else if (game.global.world == 200 && game.global.lastClearedCell > 80) {
        //   document.getElementById('Prestige').selectedIndex = 7;
        //    autoTrimpSettings.Prestige.selected = "Pantastic";
@@ -1333,14 +1338,14 @@ function autoLevelEquipment() {
     var enoughHealthE = (baseHealth * 4 > 30 * (enemyDamage - baseBlock / 2 > 0 ? enemyDamage - baseBlock / 2 : enemyDamage * 0.2) || baseHealth > 30 * (enemyDamage - baseBlock > 0 ? enemyDamage - baseBlock : enemyDamage * 0.2));
     var enoughDamageE = (baseDamage * 4 > enemyHealth);
     
-    //if (game.global.world == 200) { //&& ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 10 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20){
-    //enoughHealthE = false;
-    //enoughDamageE = false;
-    //}
+    if (game.global.world == 200) { //&& ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 10 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 20){
+    enoughHealthE = false;
+    enoughDamageE = false;
+    }
     if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '60';
+    autoTrimpSettings.GeneticistTimer.value = '55';
     }
 
     for (var equipName in equipmentList) {
