@@ -1098,7 +1098,7 @@ function buyStorage() {
            autoTrimpSettings.Prestige.selected = "Dagadder";
        } else if (game.global.world == 200 && game.global.lastClearedCell < 71 && game.global.lastClearedCell > 10) {
            document.getElementById('Prestige').selectedIndex = 3;
-           autoTrimpSettings.Prestige.selected = "Boots";
+           autoTrimpSettings.Prestige.selected = "Bootboost";
        //} else if (game.global.world == 200 && game.global.lastClearedCell > 80) {
        //   document.getElementById('Prestige').selectedIndex = 7;
        //    autoTrimpSettings.Prestige.selected = "Pantastic";
