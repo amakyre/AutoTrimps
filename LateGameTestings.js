@@ -1096,15 +1096,15 @@ function buyStorage() {
        if (game.global.world < 200) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
-       } else if (game.global.world == 200 && game.global.lastClearedCell < 70 && game.global.lastClearedCell > 10) {
+       } else if (game.global.world == 200 && game.global.lastClearedCell < 80 && game.global.lastClearedCell > 10) {
            document.getElementById('Prestige').selectedIndex = 3;
            autoTrimpSettings.Prestige.selected = "Bootboost";
-       } else if (game.global.world == 200 && game.global.lastClearedCell > 90) {
-          document.getElementById('Prestige').selectedIndex = 5;
-           autoTrimpSettings.Prestige.selected = "Hellishmet";
-       } else if (game.global.world == 200 && game.global.lastClearedCell >= 70) {
-           document.getElementById('Prestige').selectedIndex = 4;
-           autoTrimpSettings.Prestige.selected = "Megamace";
+       //} else if (game.global.world == 200 && game.global.lastClearedCell > 90) {
+        //  document.getElementById('Prestige').selectedIndex = 5;
+        //   autoTrimpSettings.Prestige.selected = "Hellishmet";
+       //} else if (game.global.world == 200 && game.global.lastClearedCell >= 80) {
+       //    document.getElementById('Prestige').selectedIndex = 4;
+       //    autoTrimpSettings.Prestige.selected = "Megamace";
        } else if (game.global.world > 200) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
@@ -1344,7 +1344,7 @@ function autoLevelEquipment() {
     if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '60';
+    autoTrimpSettings.GeneticistTimer.value = '90';
     }
 
     for (var equipName in equipmentList) {
