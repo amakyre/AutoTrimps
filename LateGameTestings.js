@@ -1090,7 +1090,7 @@ function buyStorage() {
        //     document.getElementById('Prestige').selectedIndex = 11;
         //    autoTrimpSettings.Prestige.selected = "Harmbalest";
         //2'Dagger''Dagadder',4'Mace''Megamace',6'Polearm''Polierarm',8'Battleaxe''Axeidic',10'Greatsword''Greatersword',
-        //3'Boots''Bootboost',5'Helmet''health',7'Pants''Pantastic',9'Shoulderguards''Smoldershoulder',10'Breastplate''Bestplate',
+        //3'Boots''Bootboost',5'Helmet''Hellishmet',7'Pants''Pantastic',9'Shoulderguards''Smoldershoulder',10'Breastplate''Bestplate',
         //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
         //1'Shield''Supershield',
        if (game.global.world < 200) {
@@ -1099,9 +1099,9 @@ function buyStorage() {
        } else if (game.global.world == 200 && game.global.lastClearedCell < 70 && game.global.lastClearedCell > 10) {
            document.getElementById('Prestige').selectedIndex = 3;
            autoTrimpSettings.Prestige.selected = "Bootboost";
-       //} else if (game.global.world == 200 && game.global.lastClearedCell > 80) {
-       //   document.getElementById('Prestige').selectedIndex = 7;
-       //    autoTrimpSettings.Prestige.selected = "Pantastic";
+       } else if (game.global.world == 200 && game.global.lastClearedCell > 90) {
+          document.getElementById('Prestige').selectedIndex = 5;
+           autoTrimpSettings.Prestige.selected = "Hellishmet";
        } else if (game.global.world == 200 && game.global.lastClearedCell >= 70) {
            document.getElementById('Prestige').selectedIndex = 4;
            autoTrimpSettings.Prestige.selected = "Megamace";
