@@ -1344,7 +1344,7 @@ function autoLevelEquipment() {
     if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '90';
+    autoTrimpSettings.GeneticistTimer.value = '60';
     }
 
     for (var equipName in equipmentList) {
