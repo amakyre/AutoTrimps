@@ -1105,9 +1105,12 @@ function buyStorage() {
        //} else if (game.global.world == 200 && game.global.lastClearedCell >= 80) {
        //    document.getElementById('Prestige').selectedIndex = 4;
        //    autoTrimpSettings.Prestige.selected = "Megamace";
-       } else if (game.global.world > 200) {
+       } else if (game.global.world > 200 && game.global.world < 210) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
+       } else {
+           document.getElementById('Prestige').selectedIndex = 0;
+           autoTrimpSettings.Prestige.selected = "Off";
        }
        //}
        //if (game.global.world == 200 || game.global.world == 201) {
@@ -1837,11 +1840,13 @@ function autoMap() {
 //        (game.global.mapBonus <= 0 && game.global.world >= 207 && game.global.world < 212) ||
 //        (game.global.mapBonus <= 1 && game.global.world >= 212 && game.global.world < 220) ||
         //(game.global.mapBonus <= 3 && game.global.world >= 220 && game.global.world < 225) ||
-        (game.global.mapBonus <= 8 && (game.global.world == 230 || game.global.world == 220 || game.global.world == 200)) ||
+        (game.global.mapBonus <= 8 && (game.global.world == 220 || game.global.world == 200)) ||
         (game.global.mapBonus <= 3 && (game.global.world == 210)) ||
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
-        (game.global.world >= 222 && game.global.world <= 230 && game.global.mapBonus <= 3) ||
-        (game.global.world == 230 && game.global.lastClearedCell > 79 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
+        (game.global.world >= 220 && game.global.world <= 230 && game.global.mapBonus <= 3) ||
+        (game.global.world >= 230 && game.global.mapBonus <= 7) ||
+        (game.global.world >= 230 && game.global.lastClearedCell > 93 && (new Date().getTime() - game.global.mapStarted > 8000 || game.global.mapBonus <= 9 )) ||
+    //    (game.global.world == 230 && game.global.lastClearedCell > 79 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
         (game.global.world >= 215 && game.global.world <= 220 && game.global.mapBonus <= 1)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
