@@ -1105,7 +1105,7 @@ function buyStorage() {
        //} else if (game.global.world == 200 && game.global.lastClearedCell >= 80) {
        //    document.getElementById('Prestige').selectedIndex = 4;
        //    autoTrimpSettings.Prestige.selected = "Megamace";
-       } else if (game.global.world >= 200 && game.global.world < 222) {
+       } else if (game.global.world >= 200 && game.global.world < 220) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
        } else {
@@ -1843,8 +1843,8 @@ function autoMap() {
         (game.global.mapBonus <= 8 && (game.global.world == 230 || game.global.world == 200)) ||
 //        (game.global.mapBonus <= 3 && (game.global.world == 210)) ||
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
-        (game.global.world == 230 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.lastClearedCell > 80) ||
-        (game.global.world >= 222 && game.global.world <= 230 && game.global.mapBonus <= 3) ||
+        (game.global.world == 230 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3 && game.global.lastClearedCell > 80) ||
+        (game.global.world >= 221 && game.global.world <= 230 && game.global.mapBonus <= 2) ||
         (game.global.world == 220 && game.global.mapBonus <= 2) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
     //    (game.global.world == 230 && game.global.lastClearedCell > 79 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
