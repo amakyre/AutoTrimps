@@ -1094,8 +1094,8 @@ function buyStorage() {
         //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
         //1'Shield''Supershield',
        if (game.global.world < 200) {
-           document.getElementById('Prestige').selectedIndex = 0;
-           autoTrimpSettings.Prestige.selected = "Off";
+           document.getElementById('Prestige').selectedIndex = 2;
+           autoTrimpSettings.Prestige.selected = "Dagadder";
        } else if (game.global.world == 200 && game.global.lastClearedCell < 100 && game.global.lastClearedCell > 10) {
            document.getElementById('Prestige').selectedIndex = 3;
            autoTrimpSettings.Prestige.selected = "Bootboost";
@@ -1347,7 +1347,7 @@ function autoLevelEquipment() {
     if (game.global.world < 191 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '120';
+    autoTrimpSettings.GeneticistTimer.value = '45';
     }
 
     for (var equipName in equipmentList) {
@@ -1843,7 +1843,7 @@ function autoMap() {
         (game.global.mapBonus <= 8 && (game.global.world == 230 || game.global.world == 200)) ||
         (game.global.mapBonus == 0 && (game.global.world == 199)) ||
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
-        (game.global.world < 200 && ((new Date().getTime() - game.global.zoneStarted) > 27000 && game.global.mapBonus < 1 )) ||
+//        (game.global.world < 200 && ((new Date().getTime() - game.global.zoneStarted) > 27000 && game.global.mapBonus < 1 )) ||
         (game.global.world >= 221 && game.global.world <= 230 && game.global.mapBonus <= 2) ||
         (game.global.world == 220 && game.global.mapBonus <= 2) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
