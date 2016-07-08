@@ -1847,7 +1847,7 @@ function autoMap() {
         (game.global.world >= 221 && game.global.world <= 230 && game.global.mapBonus <= 3) ||
         (game.global.world == 220 && game.global.mapBonus <= 2) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
-        (game.global.world == 200 && game.global.lastClearedCell > 20 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
+        (game.global.world == 200 && game.global.lastClearedCell > 70 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
         (game.global.world >= 9216 && game.global.world <= 220 && game.global.mapBonus < 1)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
