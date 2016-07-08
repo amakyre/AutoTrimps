@@ -1096,9 +1096,9 @@ function buyStorage() {
        if (game.global.world < 191) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
-       } else if (game.global.world == 200 && game.global.lastClearedCell < 100 && game.global.lastClearedCell > 10) {
-           document.getElementById('Prestige').selectedIndex = 3;
-           autoTrimpSettings.Prestige.selected = "Bootboost";
+    //   } else if (game.global.world == 200 && game.global.lastClearedCell < 100 && game.global.lastClearedCell > 10) {
+    //       document.getElementById('Prestige').selectedIndex = 3;
+    //       autoTrimpSettings.Prestige.selected = "Bootboost";
        //} else if (game.global.world == 200 && game.global.lastClearedCell > 90) {
         //  document.getElementById('Prestige').selectedIndex = 5;
         //   autoTrimpSettings.Prestige.selected = "Hellishmet";
@@ -1347,7 +1347,7 @@ function autoLevelEquipment() {
     if (game.global.world < 9191 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '90';
+    autoTrimpSettings.GeneticistTimer.value = '60';
     }
 
     for (var equipName in equipmentList) {
@@ -1847,7 +1847,7 @@ function autoMap() {
         (game.global.world >= 221 && game.global.world <= 230 && game.global.mapBonus <= 3) ||
         (game.global.world == 220 && game.global.mapBonus <= 2) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
-    //    (game.global.world == 230 && game.global.lastClearedCell > 79 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
+        (game.global.world == 200 && game.global.lastClearedCell > 20 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
         (game.global.world >= 9216 && game.global.world <= 220 && game.global.mapBonus < 1)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
