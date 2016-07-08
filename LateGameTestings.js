@@ -1344,10 +1344,10 @@ function autoLevelEquipment() {
     enoughHealthE = false;
     enoughDamageE = false;
     }
-    if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
+    if (game.global.world < 191 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '60';
+    autoTrimpSettings.GeneticistTimer.value = '120';
     }
 
     for (var equipName in equipmentList) {
@@ -1841,7 +1841,7 @@ function autoMap() {
 //        (game.global.mapBonus <= 1 && game.global.world >= 212 && game.global.world < 220) ||
         //(game.global.mapBonus <= 3 && game.global.world >= 220 && game.global.world < 225) ||
         (game.global.mapBonus <= 8 && (game.global.world == 230 || game.global.world == 200)) ||
-//        (game.global.mapBonus <= 3 && (game.global.world == 210)) ||
+        (game.global.mapBonus == 0 && (game.global.world == 199)) ||
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
     //    (game.global.world == 230 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.lastClearedCell > 80) ||
         (game.global.world >= 221 && game.global.world <= 230 && game.global.mapBonus <= 2) ||
