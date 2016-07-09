@@ -942,7 +942,7 @@ function easyMode() {
         autoTrimpSettings.FarmerRatio.value = '1';
         autoTrimpSettings.LumberjackRatio.value = '20';
         autoTrimpSettings.MinerRatio.value = '80';
-        } else if {
+        } else {
         autoTrimpSettings.MaxTrainers.value = -1;
         autoTrimpSettings.FarmerRatio.value = '1';
         autoTrimpSettings.LumberjackRatio.value = '1';
