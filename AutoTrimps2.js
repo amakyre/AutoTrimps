@@ -1777,10 +1777,10 @@ function autoMap() {
                    } else if (game.global.world == 200 && game.global.lastClearedCell > 70) {
                       document.getElementById('Prestige').selectedIndex = 6;
                        autoTrimpSettings.Prestige.selected = "Polierarm";
-                   } else if (game.global.world == 200 && game.global.lastClearedCell < 99 && game.global.lastClearedCell > 90) {
-                       document.getElementById('Prestige').selectedIndex = 4;
-                       autoTrimpSettings.Prestige.selected = "Megamace";
-                   }   
+                       if (game.global.lastClearedCell > 90) {
+                           document.getElementById('Prestige').selectedIndex = 4;
+                           autoTrimpSettings.Prestige.selected = "Megamace";
+                       }
                 }
                 //run Bionics before spire to farm.
                 if (getPageSetting('RunBionicBeforeSpire') && (game.global.world == 199 || game.global.world == 200) && theMap.name.includes('Bionic Wonderland')){                    
