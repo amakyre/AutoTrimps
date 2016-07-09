@@ -879,7 +879,7 @@ function initializeAutoTrimps() {
     loadPageVariables();
 
     var atscript = document.getElementById('AutoTrimps-script')
-      , base = 'https://genbtc.github.io/AutoTrimps'
+      , base = 'https://amakyre.github.io/AutoTrimps'
       ;
     if (atscript !== null) {
         base = atscript.getAttribute('src').replace(/\/AutoTrimps2\.js$/, '');
