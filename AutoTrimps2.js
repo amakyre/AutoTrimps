@@ -1681,6 +1681,8 @@ function autoMap() {
         //set the repeatBionics flag (farm bionics before spire), for the repeat management code below.
         var repeatBionics = getPageSetting('RunBionicBeforeSpire') && game.global.bionicOwned >= 5; //WARNING: Currently repeats infinitely, no cue to exit, not sure under what conditions it should exit. When Farming is done? When is that? When player's Block exceeds cell 100's Spire improbability's attack?  We can get the attack data with this command: getSpireStats(100, "Improbability", "attack"). Needs to know there are no more prestige items so we can set this to false.
 
+        //set the repeatSpireMaps flag (farm maps before spire), for the repeat management code below.
+        var repeatSpireMaps = getPageSetting('RunMapBeforeSpire')  //Repeats infinitely?
 
         //Look through all the maps we have - find Uniques or Voids and figure out if we need to run them.
         for (var map in game.global.mapsOwnedArray) {
@@ -1760,6 +1762,22 @@ function autoMap() {
                         shouldDoMap = theMap.id;
                         break;
                     }
+                }
+                if (getPageSetting('RunMapBeforeSpire') && (game.global.world == 200)) {
+                    //2'Dagger''Dagadder',4'Mace''Megamace',6'Polearm''Polierarm',8'Battleaxe''Axeidic',10'Greatsword''Greatersword',
+                    //3'Boots''Bootboost',5'Helmet''health',7'Pants''Pantastic',9'Shoulderguards''Smoldershoulder',10'Breastplate''Bestplate',
+                    //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
+                    //1'Shield''Supershield',
+                   if (game.global.world < 200) {
+                       document.getElementById('Prestige').selectedIndex = 4;
+                       autoTrimpSettings.Prestige.selected = "Megamace";
+                   } else if (game.global.world == 200 && game.global.lastClearedCell < 71 && game.global.lastClearedCell > 10) {
+                         document.getElementById('Prestige').selectedIndex = 5;
+                           autoTrimpSettings.Prestige.selected = "Hellishmet";
+                   } else if (game.global.world == 200 && game.global.lastClearedCell > 70) {
+                      document.getElementById('Prestige').selectedIndex = 6;
+                       autoTrimpSettings.Prestige.selected = "Polierarm";
+                   }
                 }
                 //run Bionics before spire to farm.
                 if (getPageSetting('RunBionicBeforeSpire') && (game.global.world == 199 || game.global.world == 200) && theMap.name.includes('Bionic Wonderland')){                    
