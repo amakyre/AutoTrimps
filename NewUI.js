@@ -119,7 +119,7 @@ createSetting('TrainerCaptoTributes', 'Cap Trainers to % of Tributes', 'Only Buy
 var amakyreBtn = document.createElement("DIV");
 amakyreBtn.setAttribute('class', 'btn btn-default');
 amakyreBtn.setAttribute('onclick', 'autoToggle(\'amakyreadvancedSettings\')');
-amakyreBtn.innerHTML = 'genBTC Advanced Settings';
+amakyreBtn.innerHTML = 'amakyre Settings';
 amakyreBtn.setAttribute("onmouseover", 'tooltip(\"amakyre Script Settings\", \"customText\", event, \"Extra script additions\")');
 amakyreBtn.setAttribute("onmouseout", 'tooltip("hide")');
 amakyreBtn.setAttribute('style', 'margin-left: 1vw; margin-right: 1vw; margin-bottom: 1vw;');
