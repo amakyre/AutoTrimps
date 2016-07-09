@@ -1771,7 +1771,7 @@ function autoMap() {
                    if (game.global.world < 200) {
                        document.getElementById('Prestige').selectedIndex = 4;
                        autoTrimpSettings.Prestige.selected = "Megamace";
-                   } else if (game.global.world == 200 && game.global.lastClearedCell < 71 && game.global.lastClearedCell > 10) {
+                   } else if (game.global.world == 200 && game.global.lastClearedCell < 71 && game.global.lastClearedCell > 22) {
                          document.getElementById('Prestige').selectedIndex = 5;
                            autoTrimpSettings.Prestige.selected = "Hellishmet";
                    } else if (game.global.world == 200 && game.global.lastClearedCell > 70) {
