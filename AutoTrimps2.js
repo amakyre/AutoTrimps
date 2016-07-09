@@ -1769,8 +1769,8 @@ function autoMap() {
                     //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
                     //1'Shield''Supershield',
                    if (game.global.world < 200) {
-                       document.getElementById('Prestige').selectedIndex = 4;
-                       autoTrimpSettings.Prestige.selected = "Megamace";
+                       document.getElementById('Prestige').selectedIndex = 2;
+                       autoTrimpSettings.Prestige.selected = "Dagadder";
                    } else if (game.global.world == 200 && game.global.lastClearedCell < 71 && game.global.lastClearedCell > 22) {
                          document.getElementById('Prestige').selectedIndex = 5;
                            autoTrimpSettings.Prestige.selected = "Hellishmet";
@@ -1778,8 +1778,8 @@ function autoMap() {
                         document.getElementById('Prestige').selectedIndex = 6;
                         autoTrimpSettings.Prestige.selected = "Polierarm";
                         if (game.global.lastClearedCell > 90) {
-                            document.getElementById('Prestige').selectedIndex = 4;
-                            autoTrimpSettings.Prestige.selected = "Megamace";
+                            document.getElementById('Prestige').selectedIndex = 2;
+                            autoTrimpSettings.Prestige.selected = "Dagadder";
                         }
                    }
                 }
