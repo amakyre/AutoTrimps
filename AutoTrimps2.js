@@ -1778,6 +1778,10 @@ function autoMap() {
                       document.getElementById('Prestige').selectedIndex = 6;
                        autoTrimpSettings.Prestige.selected = "Polierarm";
                    }
+                   if (game.global.world == 201) {
+                       document.getElementById('Prestige').selectedIndex = 4;
+                       autoTrimpSettings.Prestige.selected = "Megamace";
+                   }   
                 }
                 //run Bionics before spire to farm.
                 if (getPageSetting('RunBionicBeforeSpire') && (game.global.world == 199 || game.global.world == 200) && theMap.name.includes('Bionic Wonderland')){                    
