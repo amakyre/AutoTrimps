@@ -1174,6 +1174,8 @@ function buyBuildings() {
         } else if ((getPageSetting('MaxNursery') > game.buildings.Nursery.owned || getPageSetting('MaxNursery') == -1) && game.buildings.Tribute.owned > 2100) {
             safeBuyBuilding('Nursery');
             safeBuyBuilding('Collector');
+        } else if (game.buildings.Tribute.owned > 1400) {
+            safeBuyBuilding('Collector');
         }
     }
 }
