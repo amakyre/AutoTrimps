@@ -1344,7 +1344,7 @@ function autoLevelEquipment() {
     enoughHealthE = false;
     enoughDamageE = false;
     }
-    if (game.global.world < 200 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
+    if (game.global.world < 199 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
     autoTrimpSettings.GeneticistTimer.value = '60';
@@ -1848,7 +1848,7 @@ function autoMap() {
 //        (game.global.world == 220 && game.global.mapBonus <= 3) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
         ((game.global.world == 230 || game.global.world == 200) && game.global.lastClearedCell > 70 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
-        ((game.global.world == 217 || game.global.world >= 225 || game.global.world == 226) && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
+        ((game.global.world == 217 || game.global.world >= 225 || game.global.world == 199) && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
