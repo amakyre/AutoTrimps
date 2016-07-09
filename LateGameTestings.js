@@ -1093,7 +1093,7 @@ function buyStorage() {
         //3'Boots''Bootboost',5'Helmet''Hellishmet',7'Pants''Pantastic',9'Shoulderguards''Smoldershoulder',10'Breastplate''Bestplate',
         //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
         //1'Shield''Supershield',
-       if (game.global.world < 191) {
+       if (game.global.world < 9191) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
     //   } else if (game.global.world == 200 && game.global.lastClearedCell < 100 && game.global.lastClearedCell > 10) {
@@ -1840,15 +1840,15 @@ function autoMap() {
 //        (game.global.mapBonus <= 0 && game.global.world >= 207 && game.global.world < 212) ||
 //        (game.global.mapBonus <= 1 && game.global.world >= 212 && game.global.world < 220) ||
         //(game.global.mapBonus <= 3 && game.global.world >= 220 && game.global.world < 225) ||
-        (game.global.mapBonus <= 8 && (game.global.world == 230 || game.global.world == 200)) ||
+        (game.global.mapBonus <= 8 && (game.global.world == 9230 || game.global.world == 200)) ||
 //        (game.global.mapBonus == 0 && (game.global.world == 199  && game.global.lastClearedCell > 93)) ||
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
 //        (game.global.world < 200 && ((new Date().getTime() - game.global.zoneStarted) > 27000 && game.global.mapBonus < 1 )) ||
-        (game.global.world >= 226 && game.global.world <= 230 && game.global.mapBonus <= 2) ||
-        (game.global.world == 220 && game.global.mapBonus <= 3) ||
+//        (game.global.world >= 22// && game.global.world <= 230 && game.global.mapBonus <= 2) ||
+//        (game.global.world == 220 && game.global.mapBonus <= 3) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
-        (game.global.world == 200 && game.global.lastClearedCell > 70 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
-        (game.global.world >= 217 && game.global.world <= 225 && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
+        (game.global.world == 230 && game.global.world == 200 && game.global.lastClearedCell > 70 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
+        (game.global.world >= 9217 && game.global.world <= 225 && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
