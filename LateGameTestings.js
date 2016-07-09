@@ -936,11 +936,11 @@ function easyMode() {
         } else if (game.buildings.Tribute.owned < 2000 && game.buildings.Tribute.owned >= 1100) {
         autoTrimpSettings.FarmerRatio.value = '5';
         autoTrimpSettings.LumberjackRatio.value = '2';
-        autoTrimpSettings.MinerRatio.value = '25';
+        autoTrimpSettings.MinerRatio.value = '40';
         } else if (game.global.world <= 200) {
         autoTrimpSettings.MaxTrainers.value = -1;
         autoTrimpSettings.FarmerRatio.value = '1';
-        autoTrimpSettings.LumberjackRatio.value = '20';
+        autoTrimpSettings.LumberjackRatio.value = '5';
         autoTrimpSettings.MinerRatio.value = '80';
         } else {
         autoTrimpSettings.MaxTrainers.value = -1;
@@ -1851,7 +1851,7 @@ function autoMap() {
 //        (game.global.mapBonus <= 1 && game.global.world >= 212 && game.global.world < 220) ||
         //(game.global.mapBonus <= 3 && game.global.world >= 220 && game.global.world < 225) ||
         (game.global.mapBonus <= 8 && (game.global.world == 9230 || game.global.world == 200)) ||
-        (game.global.mapBonus <= 8 && (game.global.world == 199  && game.global.lastClearedCell > 93)) ||
+        (game.global.mapBonus <= 8 && (game.global.world == 9199  && game.global.lastClearedCell > 93)) ||
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
 //        (game.global.world < 200 && ((new Date().getTime() - game.global.zoneStarted) > 27000 && game.global.mapBonus < 1 )) ||
 //        (game.global.world >= 22// && game.global.world <= 230 && game.global.mapBonus <= 2) ||
@@ -2253,7 +2253,7 @@ function autoMap() {
                     document.getElementById("mapLevelInput").value = game.global.world;
                 else
                     document.getElementById("mapLevelInput").value = siphlvl;
-                if (game.global.world > 170) {
+                if (game.global.world > 90) {
                     sizeAdvMapsRange.value = 9;
                     adjustMap('size', 9);
                     difficultyAdvMapsRange.value = 9;
