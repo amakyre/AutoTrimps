@@ -927,7 +927,7 @@ function initializeAutoTrimps() {
 
 function easyMode() {
     if (game.resources.trimps.realMax() > 50000000) {
-        autoTrimpSettings.MaxHouse.value = 150;
+        autoTrimpSettings.MaxHouse.value = (game.global.world * 2);
         if (game.buildings.Tribute.owned < 1100) {
         autoTrimpSettings.MaxTrainers.value = game.buildings.Tribute.owned/2.1;
         autoTrimpSettings.FarmerRatio.value = '10';
@@ -1017,6 +1017,8 @@ function buyStorage() {
         }
         if (game.resources.fragments.owned > 20*getBuildingItemPrice(game.buildings.Gateway, "fragments", false, 1) && game.global.world < 80 ) {
            autoTrimpSettings.MaxGateway.value = (game.resources.fragments.owned / getBuildingItemPrice(game.buildings.Gateway, "fragments", false, 1));
+        } else if (game.resources.fragments.owned > 200*getBuildingItemPrice(game.buildings.Gateway, "fragments", false, 1)) {
+           autoTrimpSettings.MaxGateway.value = 0.8 * game.global.world;
         }
         //if (game.global.world < Math.floor((getPageSetting('VoidMaps')/2.45))) {
         //   autoTrimpSettings.DeltaGigastation.value = 50;
