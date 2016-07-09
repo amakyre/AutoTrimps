@@ -933,16 +933,22 @@ function easyMode() {
         autoTrimpSettings.FarmerRatio.value = '10';
         autoTrimpSettings.LumberjackRatio.value = '2';
         autoTrimpSettings.MinerRatio.value = '20';
-        } else if (game.buildings.Tribute.owned < 2100 && game.buildings.Tribute.owned >= 1100) {
+        } else if (game.buildings.Tribute.owned < 2000 && game.buildings.Tribute.owned >= 1100) {
         autoTrimpSettings.FarmerRatio.value = '5';
         autoTrimpSettings.LumberjackRatio.value = '2';
         autoTrimpSettings.MinerRatio.value = '25';
-        } else {
+        } else if (game.global.world <= 200) {
         autoTrimpSettings.MaxTrainers.value = -1;
-        autoTrimpSettings.FarmerRatio.value = '2';
-        autoTrimpSettings.LumberjackRatio.value = '3';
-        autoTrimpSettings.MinerRatio.value = '50';
+        autoTrimpSettings.FarmerRatio.value = '1';
+        autoTrimpSettings.LumberjackRatio.value = '20';
+        autoTrimpSettings.MinerRatio.value = '80';
+        } else if {
+        autoTrimpSettings.MaxTrainers.value = -1;
+        autoTrimpSettings.FarmerRatio.value = '1';
+        autoTrimpSettings.LumberjackRatio.value = '1';
+        autoTrimpSettings.MinerRatio.value = '60';
         }
+        
         //save some wood
         //if (getBuildingItemPrice(game.buildings.Gym, "wood", false, 1) > 100*getBuildingItemPrice(game.buildings.Nursery, "wood", false, 1)) {
         //    autoTrimpSettings.MaxNursery.value = -1;
@@ -2243,7 +2249,7 @@ function autoMap() {
                     document.getElementById("mapLevelInput").value = game.global.world;
                 else
                     document.getElementById("mapLevelInput").value = siphlvl;
-                if (game.global.world > 106) {
+                if (game.global.world > 170) {
                     sizeAdvMapsRange.value = 9;
                     adjustMap('size', 9);
                     difficultyAdvMapsRange.value = 9;
