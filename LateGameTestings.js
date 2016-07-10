@@ -745,6 +745,7 @@ function evaluateEfficiency(equipName) {
         Wall = true;
     }
     //test - workimg
+    WarpstationWall = false;
     if (10*Cos > NextCost) {
         Wall = true;
         WarpstationWall = true;
