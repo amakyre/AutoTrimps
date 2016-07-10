@@ -306,18 +306,16 @@ function highlightHousing() {
                 bestBuilding = keysSorted[best];
                 
                 //Warpstation Cap - if we are past the basewarp+deltagiga level, "cap" and just wait for next giga.
-                if ((getPageSetting('WarpstationCap') && bestBuilding == "Warpstation" &&
-                    (game.buildings.Warpstation.owned >= (Math.floor(game.upgrades.Gigastation.done * getPageSetting('DeltaGigastation')) + getPageSetting('FirstGigastation')))) ||
-                    ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 35)
-                        bestBuilding = null;
-                        
-                break;
+                //if ((getPageSetting('WarpstationCap') && bestBuilding == "Warpstation" &&
+                //    (game.buildings.Warpstation.owned >= (Math.floor(game.upgrades.Gigastation.done * getPageSetting('DeltaGigastation')) + getPageSetting('FirstGigastation')))) ||
+                //    ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 35)
+                //        bestBuilding = null;
+                //break;
                 
                 //Warpstation Wall - if we try to save to next prestige, allow only warps that cost allot less then current metal.
-                if ((WarpstationWall == true && bestBuilding == "Warpstation") ||
-                    (25 * getBuildingItemPrice(game.buildings.Warpstation, "metal", false, 1) > game.resources.metal.owned))
+                if (WarpstationWall == true && bestBuilding == "Warpstation")
+                //    (1.1 * getBuildingItemPrice(game.buildings.Warpstation, "metal", false, 1) > game.resources.metal.owned))
                         bestBuilding = null;
-                        
                 break;
             }
         }
