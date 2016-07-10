@@ -314,8 +314,8 @@ function highlightHousing() {
                 break;
                 
                 //Warpstation Wall - if we try to save to next prestige, allow only warps that cost allot less then current metal.
-                if (WarpstationWall == true && bestBuilding == "Warpstation")
-                    25 * getBuildingItemPrice(game.buildings.Warpstation, "metal", false, 1) > game.resources.metal.owned)
+                if ((WarpstationWall == true && bestBuilding == "Warpstation") ||
+                    25 * getBuildingItemPrice(game.buildings.Warpstation, "metal", false, 1) > game.resources.metal.owned))
                         bestBuilding = null;
                         
                 break;
