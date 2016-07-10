@@ -745,21 +745,23 @@ function evaluateEfficiency(equipName) {
         Wall = true;
     }
     //test - working
+    if (equip.Stat = 'attack')
     WarpstationWall = false;
-    if ((10*Cos > NextCost) || (gameResource.prestige < ((game.global.world-10)/5)+2 && gameResource.level > 2)) {
+    }
+    if (10*Cos > NextCost) {
         Wall = true;
         WarpstationWall = true;
     }
     // a test - working
-    //if (gameResource.prestige < ((game.global.world-10)/5)+2 && gameResource.level > 2) {
-    //    Res = 0;
-    //    Wall = true;
-    //    WarpstationWall = true;
-    //}
-    //not working 
-    //if (gameResource.prestige <= ((game.global.world-10)/5)+2) {
-    //    WarpstationWall = true;
-    //}
+    if (gameResource.prestige < ((game.global.world-10)/5)+2 && gameResource.level > 2) {
+        Res = 0;
+        Wall = true;
+        WarpstationWall = true;
+    }
+    not working 
+    if (gameResource.prestige <= ((game.global.world-10)/5)+2) {
+        WarpstationWall = true;
+    }
     if (gameResource.prestige+1 < ((game.global.world-10)/5)+2 && gameResource.level > 0) {
         Res = 0;
         Wall = true;
