@@ -764,6 +764,7 @@ function evaluateEfficiency(equipName) {
     }
     //not working 
     if ((gameResource.prestige <= ((game.global.world-10)/5)+2) && (equip.Stat == 'attack')) {
+        WarpstationWall = true;
     } else {
         WarpstationWall = false;
     }
