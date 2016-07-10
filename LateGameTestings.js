@@ -745,7 +745,7 @@ function evaluateEfficiency(equipName) {
         Wall = true;
     }
     //test - working
-    if (equip.Stat == 'attack')
+    if (equip.Stat == 'attack') {
     WarpstationWall = false;
     }
     if (10*Cos > NextCost) {
