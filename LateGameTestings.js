@@ -314,8 +314,8 @@ function highlightHousing() {
                 break;
                 
                 //Warpstation Wall - if we try to save to next prestige, allow only warps that cost allot less then current metal.
-                if ((WarpstationWall == true && bestBuilding == "Warpstation") || (bestBuilding == "Warpstation" && game.buildings.Warpstation.owned >= 241 && game.global.world == 235))
-                    //25 * getBuildingItemPrice(game.buildings.Warpstation, "metal", false, 1) > game.resources.metal.owned)
+                if (WarpstationWall == true && bestBuilding == "Warpstation")
+                    25 * getBuildingItemPrice(game.buildings.Warpstation, "metal", false, 1) > game.resources.metal.owned)
                         bestBuilding = null;
                         
                 break;
@@ -760,9 +760,6 @@ function evaluateEfficiency(equipName) {
     if (gameResource.prestige+1 < ((game.global.world-10)/5)+2 && gameResource.level > 0) {
         Res = 0;
         Wall = true;
-    }
-    if (equip.Stat == 'attack' && gameResource.level < 4) {
-        WarpstationWall = true;
     }
     if (gameResource.level > 11 && game.global.world != 200) {
         Res = 0;
