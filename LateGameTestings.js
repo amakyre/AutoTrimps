@@ -758,7 +758,7 @@ function evaluateEfficiency(equipName) {
         Wall = true;
         WarpstationWall = true;
     }
-    not working 
+    //not working 
     if (gameResource.prestige <= ((game.global.world-10)/5)+2) {
         WarpstationWall = true;
     }
