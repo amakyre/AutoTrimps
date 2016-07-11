@@ -1106,7 +1106,7 @@ function buyStorage() {
         //3'Boots''Bootboost',5'Helmet''Hellishmet',7'Pants''Pantastic',9'Shoulderguards''Smoldershoulder',10'Breastplate''Bestplate',
         //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
         //1'Shield''Supershield',
-       if (game.global.world < 225) {
+       if (game.global.world < 225 && game.global.world > 50) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
     //   } else if (game.global.world == 200 && game.global.lastClearedCell < 100 && game.global.lastClearedCell > 10) {
@@ -1118,7 +1118,7 @@ function buyStorage() {
        //} else if (game.global.world == 200 && game.global.lastClearedCell >= 80) {
        //    document.getElementById('Prestige').selectedIndex = 4;
        //    autoTrimpSettings.Prestige.selected = "Megamace";
-       } else if (game.global.world > 200 && game.global.world < 220) {
+       } else if ((game.global.world > 200 && game.global.world < 220) || game.global.world == 15 || game.global.world == 25 || game.global.world == 37){
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
        } else {
