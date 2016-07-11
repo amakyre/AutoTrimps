@@ -1863,8 +1863,7 @@ function autoMap() {
         (game.global.world == 220 && game.global.mapBonus <= 2) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
         ((game.global.world == 9235 || game.global.world == 200) && game.global.lastClearedCell > 70 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
-        ((game.global.world == 235 || game.global.world == 9200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 4.5) ||
-
+//        ((game.global.world == 235 || game.global.world == 9200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
         ((game.global.world >= 223 && game.global.world < 235 ) && game.global.mapBonus < 2) ||
         ((game.global.world == 214 || game.global.world == 215 || game.global.world == 216) && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
