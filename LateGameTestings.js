@@ -1106,7 +1106,7 @@ function buyStorage() {
         //3'Boots''Bootboost',5'Helmet''Hellishmet',7'Pants''Pantastic',9'Shoulderguards''Smoldershoulder',10'Breastplate''Bestplate',
         //11'Arbalest''Harmbalest',12'Gambeson''GambesOP',
         //1'Shield''Supershield',
-       if (game.global.world < 225 && game.global.world > 950) {
+       if (game.global.world < 200) {
            document.getElementById('Prestige').selectedIndex = 2;
            autoTrimpSettings.Prestige.selected = "Dagadder";
     //   } else if (game.global.world == 200 && game.global.lastClearedCell < 100 && game.global.lastClearedCell > 10) {
@@ -1118,9 +1118,9 @@ function buyStorage() {
        //} else if (game.global.world == 200 && game.global.lastClearedCell >= 80) {
        //    document.getElementById('Prestige').selectedIndex = 4;
        //    autoTrimpSettings.Prestige.selected = "Megamace";
-       } else if ((game.global.world > 9200 && game.global.world < 220) || game.global.world == 915 || game.global.world == 925 || game.global.world == 937){
-           document.getElementById('Prestige').selectedIndex = 2;
-           autoTrimpSettings.Prestige.selected = "Dagadder";
+//       } else if ((game.global.world > 9200 && game.global.world < 220) || game.global.world == 915 || game.global.world == 925 || game.global.world == 937){
+//           document.getElementById('Prestige').selectedIndex = 2;
+//           autoTrimpSettings.Prestige.selected = "Dagadder";
        } else {
            document.getElementById('Prestige').selectedIndex = 0;
            autoTrimpSettings.Prestige.selected = "Off";
@@ -1860,13 +1860,13 @@ function autoMap() {
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
 //        (game.global.world < 200 && ((new Date().getTime() - game.global.zoneStarted) > 27000 && game.global.mapBonus < 1 )) ||
 //        (game.global.world >= 22// && game.global.world <= 230 && game.global.mapBonus <= 2) ||
-        ((game.global.world == 50 || game.global.world == 60 || game.global.world == 70 || game.global.world == 80 || game.global.world == 90 || game.global.world == 100 || game.global.world == 110 || game.global.world == 120 || game.global.world == 130 || game.global.world == 140 || game.global.world == 150 || game.global.world == 160 || game.global.world == 170 || game.global.world == 180 || game.global.world == 190 || game.global.world == 165 || game.global.world == 175 || game.global.world == 185 || game.global.world == 199) && game.global.mapBonus <= 1) ||
+//        ((game.global.world == 50 || game.global.world == 60 || game.global.world == 70 || game.global.world == 80 || game.global.world == 90 || game.global.world == 100 || game.global.world == 110 || game.global.world == 120 || game.global.world == 130 || game.global.world == 140 || game.global.world == 150 || game.global.world == 160 || game.global.world == 170 || game.global.world == 180 || game.global.world == 190 || game.global.world == 165 || game.global.world == 175 || game.global.world == 185 || game.global.world == 199) && game.global.mapBonus <= 1) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
-        ((game.global.world == 9235 || game.global.world == 200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 1.5) ||
+        ((game.global.world == 9235 || game.global.world == 200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
         ((game.global.world == 240 || game.global.world == 9200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 4.5) ||
         ((game.global.world == 210 || game.global.world == 220 || game.global.world == 231 || game.global.world == 233 ||  game.global.world == 235 || game.global.world == 236 || game.global.world == 237 || game.global.world == 238 || game.global.world == 239) && game.global.mapBonus < 3) ||
-        ((game.global.world == 205 || game.global.world == 215 || game.global.world == 225 ) && game.global.mapBonus < 1) ||
-        ((game.global.world == 15 || game.global.world == 25 || game.global.world == 31 || game.global.world == 34 || game.global.world == 37 || game.global.world == 41 || game.global.world == 43 || game.global.world == 45 || game.global.world == 47) && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
+        ((game.global.world == 205 || game.global.world == 215 || game.global.world == 225 ) && game.global.mapBonus < 1)) {
+//        ((game.global.world == 15 || game.global.world == 25 || game.global.world == 31 || game.global.world == 34 || game.global.world == 37 || game.global.world == 41 || game.global.world == 43 || game.global.world == 45 || game.global.world == 47) && game.global.mapBonus < 1 && !game.global.mapsActive)) {  //didnt work (game.global.mapBonus < game.global.world-(game.upgrades.Coordinated.level+1)
         //(((((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 80) || game.global.world > 244) && game.global.lastClearedCell > 93 && game.global.world > 225)) {
             shouldDoMaps = true;
             shouldDoNullMaps = true;
