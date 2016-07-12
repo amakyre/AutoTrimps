@@ -1362,7 +1362,7 @@ function autoLevelEquipment() {
     if (game.global.world < 199 || game.global.world > 200 || ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) > 85) {
     autoTrimpSettings.GeneticistTimer.value = '30';
     } else {
-    autoTrimpSettings.GeneticistTimer.value = '60';
+    autoTrimpSettings.GeneticistTimer.value = '5';
     }
 
     for (var equipName in equipmentList) {
@@ -1552,8 +1552,8 @@ function manualLabor() {
 function autoStance() {
     if (game.global.gridArray.length === 0) return;
     var missingHealth = game.global.soldierHealthMax - game.global.soldierHealth;
-    if (game.global.world == 9200 && !game.global.mapsActive) {
-        var newSquadRdy = false;
+    if (game.global.world == 200) { // && !game.global.mapsActive
+        var newSquadRdy = true;
     } else {
         var newSquadRdy = game.resources.trimps.realMax() <= game.resources.trimps.owned + 1;
     }
@@ -1860,9 +1860,9 @@ function autoMap() {
         //(((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 2.5 && game.global.world == 220 && game.global.lastClearedCell > 85) ||
 //        (game.global.world < 200 && ((new Date().getTime() - game.global.zoneStarted) > 27000 && game.global.mapBonus < 1 )) ||
 //        (game.global.world >= 22// && game.global.world <= 230 && game.global.mapBonus <= 2) ||
-        ((game.global.world == 50 || game.global.world == 60 || game.global.world == 70 || game.global.world == 80 || game.global.world == 90 || game.global.world == 100 || game.global.world == 110 || game.global.world == 120 || game.global.world == 130 || game.global.world == 140 || game.global.world == 150 || game.global.world == 160 || game.global.world == 170 || game.global.world == 180 || game.global.world == 190 || game.global.world == 175 || game.global.world == 185 || game.global.world == 195) && game.global.mapBonus <= 1) ||
+        ((game.global.world == 50 || game.global.world == 60 || game.global.world == 70 || game.global.world == 80 || game.global.world == 90 || game.global.world == 100 || game.global.world == 110 || game.global.world == 120 || game.global.world == 130 || game.global.world == 140 || game.global.world == 150 || game.global.world == 160 || game.global.world == 170 || game.global.world == 180 || game.global.world == 190 || game.global.world == 155 || game.global.world == 165 || game.global.world == 175 || game.global.world == 185 || game.global.world == 195) && game.global.mapBonus <= 1) ||
 //        (game.global.world >= 210 && game.global.lastClearedCell > 93 && ((new Date().getTime() - game.global.mapStarted > 8000 && game.global.mapsActive) || game.global.mapBonus <= 9 )) ||
-        ((game.global.world == 9235 || game.global.world == 200) && game.global.lastClearedCell > 70 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
+        ((game.global.world == 9235 || game.global.world == 200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 1.5) ||
         ((game.global.world == 240 || game.global.world == 9200) && game.global.lastClearedCell > 80 && ((new Date().getTime() - game.global.zoneStarted) / 1000 / 60) < 3) ||
         ((game.global.world == 210 || game.global.world == 220 || game.global.world == 235 ) && game.global.mapBonus < 3) ||
         ((game.global.world == 205 || game.global.world == 215 || game.global.world == 225 ) && game.global.mapBonus < 1) ||
