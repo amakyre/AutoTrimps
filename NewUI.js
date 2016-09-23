@@ -133,6 +133,7 @@ document.getElementById("autoSettings").appendChild(amakyreadv);
 
 //amakyre options
 createSetting('RunMapBeforeSpire', 'Run Map Before Spire', 'Run a Mountain level 200 Map until Pants 8', 'boolean', null, null, 'amakyreadvancedSettings');
+createSetting('SecondVoidMaps', 'Second Void Maps', 'The zone at which you want the second stage of void maps to be cleared (Cell 96).  0 is off', 'value', '0', null, 'amakyreadvancedSettings');
 
 //Manage importexport Settings - Create button.
 var importexportBtn = document.createElement("DIV");
